@@ -1,0 +1,17 @@
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Application.deps.json
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Application.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Application.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Infrastructure.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Domain.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\bin\Debug\net7.0\djanak.Infrastructure.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.csproj.AssemblyReference.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.AssemblyInfo.cs
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.csproj.CopyComplete
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\refint\djanak.Application.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\djanak.Application.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Application\obj\Debug\net7.0\ref\djanak.Application.dll

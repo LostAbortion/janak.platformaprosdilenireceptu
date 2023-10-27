@@ -1,0 +1,15 @@
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Infrastructure.deps.json
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Infrastructure.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Infrastructure.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Domain.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.AssemblyInfo.cs
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.csproj.CopyComplete
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\refint\djanak.Infrastructure.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\ref\djanak.Infrastructure.dll

@@ -1,0 +1,11 @@
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\bin\Debug\net7.0\djanak.Domain.deps.json
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\bin\Debug\net7.0\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\bin\Debug\net7.0\djanak.Domain.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.AssemblyInfo.cs
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\refint\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.pdb
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\ref\djanak.Domain.dll

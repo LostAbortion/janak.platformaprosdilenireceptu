@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "djanak.Application/1.0.0": {
+        "dependencies": {
+          "djanak.Domain": "1.0.0",
+          "djanak.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "djanak.Application.dll": {}
+        }
+      },
+      "djanak.Domain/1.0.0": {
+        "runtime": {
+          "djanak.Domain.dll": {}
+        }
+      },
+      "djanak.Infrastructure/1.0.0": {
+        "dependencies": {
+          "djanak.Domain": "1.0.0"
+        },
+        "runtime": {
+          "djanak.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "djanak.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "djanak.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "djanak.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

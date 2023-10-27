@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "djanak.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/djanak.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/djanak.Domain.dll": {}
+        }
+      },
+      "djanak.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "djanak.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/djanak.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/djanak.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "djanak.Domain/1.0.0": {
+      "type": "project",
+      "path": "../djanak.Domain/djanak.Domain.csproj",
+      "msbuildProject": "../djanak.Domain/djanak.Domain.csproj"
+    },
+    "djanak.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../djanak.Infrastructure/djanak.Infrastructure.csproj",
+      "msbuildProject": "../djanak.Infrastructure/djanak.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "djanak.Domain >= 1.0.0",
+      "djanak.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\danie\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\djanak.Domain\\djanak.Domain.csproj": {
+              "projectPath": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\djanak.Domain\\djanak.Domain.csproj"
+            },
+            "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\djanak.Infrastructure\\djanak.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\djanak.Infrastructure\\djanak.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
