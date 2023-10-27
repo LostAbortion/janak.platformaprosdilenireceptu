@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "janak.platformaprosdilenireceptu", "janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu.csproj", "{A0B07549-C77D-4D15-ADCB-73122EDC09A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "janak.platformaprosdilenireceptu", "janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu.csproj", "{A0B07549-C77D-4D15-ADCB-73122EDC09A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Application", "Application\djanak.Application.csproj", "{2ADAC36B-0B21-4C88-B321-CD728449DFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Tests", "janak.Tests\djanak.Tests.csproj", "{C1779102-EA37-4838-89A3-FB1DDD33B52A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Domain", "djanak.Domain\djanak.Domain.csproj", "{19EDFBB0-1723-4414-9EEF-863EA13A274B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Infrastructure", "djanak.Infrastructure\djanak.Infrastructure.csproj", "{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{A0B07549-C77D-4D15-ADCB-73122EDC09A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0B07549-C77D-4D15-ADCB-73122EDC09A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0B07549-C77D-4D15-ADCB-73122EDC09A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADAC36B-0B21-4C88-B321-CD728449DFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADAC36B-0B21-4C88-B321-CD728449DFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADAC36B-0B21-4C88-B321-CD728449DFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADAC36B-0B21-4C88-B321-CD728449DFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1779102-EA37-4838-89A3-FB1DDD33B52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1779102-EA37-4838-89A3-FB1DDD33B52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1779102-EA37-4838-89A3-FB1DDD33B52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1779102-EA37-4838-89A3-FB1DDD33B52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19EDFBB0-1723-4414-9EEF-863EA13A274B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19EDFBB0-1723-4414-9EEF-863EA13A274B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19EDFBB0-1723-4414-9EEF-863EA13A274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19EDFBB0-1723-4414-9EEF-863EA13A274B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
