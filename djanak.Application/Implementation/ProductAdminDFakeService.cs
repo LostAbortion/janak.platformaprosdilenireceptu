@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using djanak.Application.Abstraction;
@@ -20,7 +19,7 @@ namespace djanak.Application.Implementation
 
         public void Create(Product product)
         {
-            if (DatabaseFake.Products != null && DatabaseFake.Products.Count < 0)
+            if (DatabaseFake.Products != null && DatabaseFake.Products.Count > 0)
             {
                 product.Id = DatabaseFake.Products.Last().Id + 1;
             }
@@ -33,20 +32,19 @@ namespace djanak.Application.Implementation
             {
                 DatabaseFake.Products.Add(product);
             }
+        }
+        public bool Delete(int id)
+        {
+            bool deleted = false;
 
-            public bool Delete(int id) 
+            Product? product = DatabaseFake.Products.FirstOrDefault(product => product.Id == id);
+
+            if (product != null)
             {
-                bool deleted = false;
-
-                Product? product = DatabaseFake.Products.FirstOrDefault(product => product.Id == id);
-
-                if (product != null)
-                {
-                    deleted = DatabaseFake.Products.Remove(product);
-                }
-
-                return deleted;
+                deleted = DatabaseFake.Products.Remove(product);
             }
+
+            return deleted;
         }
     }
 }

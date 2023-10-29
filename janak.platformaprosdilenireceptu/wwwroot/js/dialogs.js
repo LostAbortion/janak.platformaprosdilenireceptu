@@ -1,3 +1,3 @@
 function ConfirmDelete() {
-    return confirm("Are you sure? (ConfirmDelete)");
+    return confirm("Are you sure?");
 }
