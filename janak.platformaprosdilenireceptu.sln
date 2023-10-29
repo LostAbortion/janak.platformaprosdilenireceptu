@@ -5,13 +5,13 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "janak.platformaprosdilenireceptu", "janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu.csproj", "{A0B07549-C77D-4D15-ADCB-73122EDC09A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Infrastructure", "djanak.Infrastructure\djanak.Infrastructure.csproj", "{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "djanak.Infrastructure", "djanak.Infrastructure\djanak.Infrastructure.csproj", "{3A54F9BA-5182-4DC9-8CCA-EDF69D9DEA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Application", "djanak.Application\djanak.Application.csproj", "{D1844E9B-F98F-4619-8878-7C9CAA8145BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "djanak.Application", "djanak.Application\djanak.Application.csproj", "{D1844E9B-F98F-4619-8878-7C9CAA8145BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Tests", "djanak.Tests\djanak.Tests.csproj", "{787EEB34-079E-4D16-BFF6-BC9BCFB2A247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "djanak.Tests", "djanak.Tests\djanak.Tests.csproj", "{787EEB34-079E-4D16-BFF6-BC9BCFB2A247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "djanak.Domain", "djanak.Domain\djanak.Domain.csproj", "{A750AC56-B871-49D1-BCCE-AD5543D15D53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "djanak.Domain", "djanak.Domain\djanak.Domain.csproj", "{A750AC56-B871-49D1-BCCE-AD5543D15D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
