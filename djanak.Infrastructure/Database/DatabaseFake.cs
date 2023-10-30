@@ -11,17 +11,12 @@ namespace djanak.Infrastructure.Database
     public class DatabaseFake
     {
         public static List<Product> Products { get; set; }
+        public static List<Carousel> Carousels { get; set; }
         static DatabaseFake()
         {
-            Products = new List<Product>();
-            Products.Add(new Product()
-            {
-                Id = 1,
-                Name = "iPhone",
-                Description = "mobilni telefon",
-                Price = 20,
-                ImageSrc = ""
-            });
+            DatabaseInit dbInit = new DatabaseInit();
+            Products = dbInit.GetProducts().ToList();
+            Carousels = dbInit.GetCarousels().ToList();
         }
     }
 }

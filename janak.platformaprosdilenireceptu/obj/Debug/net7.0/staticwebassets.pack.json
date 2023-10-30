@@ -5,12 +5,48 @@
       "PackagePath": "staticwebassets\\janak.platformaprosdilenireceptu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\shop_home.css",
+      "PackagePath": "staticwebassets\\css\\shop_home.css"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\carousel\\carousel-01.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel\\carousel-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\carousel\\carousel-02.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel\\carousel-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\carousel\\carousel-03.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel\\carousel-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-01.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\produkty-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-02.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\produkty-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-03.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\produkty-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-04.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\produkty-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-05.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\produkty-05.jpg"
     },
     {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
