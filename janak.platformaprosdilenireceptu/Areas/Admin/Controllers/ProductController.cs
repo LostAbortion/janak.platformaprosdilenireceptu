@@ -46,5 +46,26 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
                 return NotFound();
             }
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Product product = _productService.GetProductById(id);
+
+            if (product == null) 
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Product product)
+        {
+            _productService.Edit(product);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

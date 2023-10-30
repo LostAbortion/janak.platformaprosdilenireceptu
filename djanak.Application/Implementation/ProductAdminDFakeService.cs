@@ -46,5 +46,24 @@ namespace djanak.Application.Implementation
 
             return deleted;
         }
+
+        public void Edit(Product product)
+        {
+            Product currentProduct = DatabaseFake.Products.FirstOrDefault(p => p.Id == product.Id);
+
+            if (currentProduct != null) 
+            {
+                //Zde změní hodnoty aktuálního produktu na nové
+                currentProduct.Name = product.Name;
+                currentProduct.Description = product.Description;
+                currentProduct.Price = product.Price;
+                currentProduct.ImageSrc = product.ImageSrc;
+            }
+        }
+
+        public Product GetProductById(int id)
+        {
+            return DatabaseFake.Products.FirstOrDefault(prod => prod.Id == id);
+        }
     }
 }

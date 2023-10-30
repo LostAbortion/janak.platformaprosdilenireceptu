@@ -16,5 +16,13 @@
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Edit.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Areas\Admin\Views\Product\Edit.cshtml" />
+	</ItemGroup>
+
 </Project>
 

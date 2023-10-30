@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l0Zm8svRqptP/j3WMcGIlxhZ1UzKJR1AnYnSpwqs9p4=",
+  "Hash": "9fXRDryNo74GvRgK54A0A1yqKMZgjX52FtrZ3YhSn2Q=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -153,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\img\\carousel\\carousel-03.jpg"
     },
     {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-01.jpg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkt-01.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
       "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/produkty-01.jpg",
+      "RelativePath": "img/products/produkt-01.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\produkty-01.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\products\\produkt-01.jpg"
     },
     {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-02.jpg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkt-02.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
       "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/produkty-02.jpg",
+      "RelativePath": "img/products/produkt-02.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\produkty-02.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\products\\produkt-02.jpg"
     },
     {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-03.jpg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkt-03.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
       "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/produkty-03.jpg",
+      "RelativePath": "img/products/produkt-03.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\produkty-03.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\products\\produkt-03.jpg"
     },
     {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-04.jpg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkt-04.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
       "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/produkty-04.jpg",
+      "RelativePath": "img/products/produkt-04.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\produkty-04.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\products\\produkt-04.jpg"
     },
     {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkty-05.jpg",
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\produkt-05.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
       "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/produkty-05.jpg",
+      "RelativePath": "img/products/produkt-05.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,7 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\produkty-05.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\products\\produkt-05.jpg"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
