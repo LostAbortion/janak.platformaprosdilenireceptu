@@ -27,7 +27,9 @@ namespace djanak.Infrastructure.Database
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
                     SeznamSurovin = "maso, všechno další",
                     PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12)
+                    DatumVytvoreni = new DateTime(2022, 12, 12),
+                    ImageSrc = "/img/products/produkt-01.jpg",
+                    ImageAlt = "Obrazek1"
                 });
             
             products.Add(
@@ -41,7 +43,9 @@ namespace djanak.Infrastructure.Database
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
                     SeznamSurovin = "maso, všechno další",
                     PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12)
+                    DatumVytvoreni = new DateTime(2022, 12, 12),
+                    ImageSrc = "/img/products/produkt-01.jpg",
+                    ImageAlt = "Obrazek2"
                 });
 
             products.Add(
@@ -55,7 +59,9 @@ namespace djanak.Infrastructure.Database
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
                     SeznamSurovin = "maso, všechno další",
                     PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12)
+                    DatumVytvoreni = new DateTime(2022, 12, 12),
+                    ImageSrc = "/img/products/produkt-01.jpg",
+                    ImageAlt = "Obrazek1"
                 });
 
             products.Add(
@@ -69,7 +75,9 @@ namespace djanak.Infrastructure.Database
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
                     SeznamSurovin = "maso, všechno další",
                     PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12)
+                    DatumVytvoreni = new DateTime(2022, 12, 12),
+                    ImageSrc = "/img/products/produkt-01.jpg",
+                    ImageAlt = "Obrazek1"
                 });
 
             products.Add(
@@ -83,7 +91,9 @@ namespace djanak.Infrastructure.Database
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
                     SeznamSurovin = "maso, všechno další",
                     PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12)
+                    DatumVytvoreni = new DateTime(2022, 12, 12),
+                    ImageSrc = "/img/products/produkt-01.jpg",
+                    ImageAlt = "Obrazek1"
                 });
             
             return products;

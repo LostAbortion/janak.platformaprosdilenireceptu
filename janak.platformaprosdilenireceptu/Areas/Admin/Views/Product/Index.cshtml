@@ -21,6 +21,8 @@
                     <th scope="col">@nameof(Product.SeznamSurovin)</th>
                     <th scope="col">@nameof(Product.PostupPripravy)</th>
                     <th scope="col">@nameof(Product.DatumVytvoreni)</th>
+                    <th scope="col">@nameof(Product.ImageSrc)</th>
+                    <th scope="col">@nameof(Product.ImageAlt)</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -38,6 +40,8 @@
                         <td>@Model[i].SeznamSurovin</td>
                         <td>@Model[i].PostupPripravy</td>
                         <td>@Model[i].DatumVytvoreni</td>
+                        <td>@Model[i].ImageSrc</td>
+                        <td>@Model[i].ImageAlt</td>
                         <td><a asp-action="Edit" asp-route-Id="@Model[i].Id">Edit</a></td>
                         <td><a asp-action="Delete" asp-route-Id="@Model[i].Id" onclick="return ConfirmDelete();">Delete</a></td>
                     </tr>

@@ -19,5 +19,7 @@ namespace djanak.Domain.Entities
         public string SeznamSurovin { get; set; }
         public string PostupPripravy { get; set; }
         public DateTime DatumVytvoreni { get; set; }
+        public string ImageSrc { get; set; }
+        public string ImageAlt { get; set; }
     }
 }

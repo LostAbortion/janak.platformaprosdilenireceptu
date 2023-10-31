@@ -63,6 +63,8 @@ namespace djanak.Application.Implementation
                 currentProduct.SeznamSurovin = product.SeznamSurovin;
                 currentProduct.PostupPripravy = product.PostupPripravy;
                 currentProduct.DatumVytvoreni = product.DatumVytvoreni;
+                currentProduct.ImageSrc = product.ImageSrc;
+                currentProduct.ImageAlt = product.ImageAlt;
             }
         }
 
