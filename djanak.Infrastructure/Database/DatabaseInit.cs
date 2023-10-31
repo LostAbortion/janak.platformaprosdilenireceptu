@@ -20,52 +20,72 @@ namespace djanak.Infrastructure.Database
                 new Product()
                 {
                     Id = 1,
-                    Name = "Rohlík",
-                    Description = "Nejlepší rohlík na světě",
-                    Price = 10,
-                    ImageSrc = "/img/products/produkt-01.jpg"
+                    NazevProductu = "Svíčková s falešnou svíčkovou1",
+                    Kategorie = "Omáčky",
+                    Obtiznost = "Střední",
+                    CasovaNarocnost = "Do hodiny",
+                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
+                    SeznamSurovin = "maso, všechno další",
+                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
+                    DatumVytvoreni = new DateTime(2022, 12, 12)
                 });
-
+            
             products.Add(
                 new Product()
                 {
                     Id = 2,
-                    Name = "Chleba",
-                    Description = "Nejlepší chleba ve vesmíru",
-                    Price = 50,
-                    ImageSrc = "/img/products/produkt-02.jpg"
+                    NazevProductu = "Svíčková s falešnou svíčkovou2",
+                    Kategorie = "Omáčky",
+                    Obtiznost = "Střední",
+                    CasovaNarocnost = "Do hodiny",
+                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
+                    SeznamSurovin = "maso, všechno další",
+                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
+                    DatumVytvoreni = new DateTime(2022, 12, 12)
                 });
 
             products.Add(
                 new Product()
                 {
                     Id = 3,
-                    Name = "Bageta",
-                    Description = "Nejlepší bageta v galaxii",
-                    Price = 35,
-                    ImageSrc = "/img/products/produkt-03.jpg"
+                    NazevProductu = "Svíčková s falešnou svíčkovou3",
+                    Kategorie = "Omáčky",
+                    Obtiznost = "Střední",
+                    CasovaNarocnost = "Do hodiny",
+                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
+                    SeznamSurovin = "maso, všechno další",
+                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
+                    DatumVytvoreni = new DateTime(2022, 12, 12)
                 });
 
             products.Add(
                 new Product()
                 {
                     Id = 4,
-                    Name = "Dalamánek",
-                    Description = "Nejlepší dalamánek ve sluneční soustavě",
-                    Price = 8,
-                    ImageSrc = "/img/products/produkt-04.jpg"
+                    NazevProductu = "Svíčková s falešnou svíčkovou4",
+                    Kategorie = "Omáčky",
+                    Obtiznost = "Střední",
+                    CasovaNarocnost = "Do hodiny",
+                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
+                    SeznamSurovin = "maso, všechno další",
+                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
+                    DatumVytvoreni = new DateTime(2022, 12, 12)
                 });
 
             products.Add(
                 new Product()
                 {
                     Id = 5,
-                    Name = "Vánočka",
-                    Description = "Není to nic moc, ale může tady být",
-                    Price = 80,
-                    ImageSrc = "/img/products/produkt-05.jpg"
+                    NazevProductu = "Svíčková s falešnou svíčkovou5",
+                    Kategorie = "Omáčky",
+                    Obtiznost = "Střední",
+                    CasovaNarocnost = "Do hodiny",
+                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
+                    SeznamSurovin = "maso, všechno další",
+                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
+                    DatumVytvoreni = new DateTime(2022, 12, 12)
                 });
-
+            
             return products;
         }
 

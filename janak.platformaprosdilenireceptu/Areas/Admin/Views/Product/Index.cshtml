@@ -1,11 +1,11 @@
 ﻿@model IList<Product>
 
 @{
-	ViewData["Title"] = "Product Administration";  //TOTO JE VIEW NA "PRODUCTS"
+	ViewData["Title"] = "Seznam receptů";  //TOTO JE VIEW NA "PRODUCTS"
 }
 <h1>@ViewData["Title"]</h1>
 
-<a asp-action="Create">Create Product</a>
+<a asp-action="Create">Přidat recept</a>
 @{
     if (Model != null && Model.Count > 0)
     {
@@ -13,10 +13,14 @@
             <thead>
                 <tr>
                     <th scope="col">@nameof(Product.Id)</th>
-                    <th scope="col">@nameof(Product.Name)</th>
-                    <th scope="col">@nameof(Product.Description)</th>
-                    <th scope="col">@nameof(Product.Price)</th>
-                    <th scope="col">@nameof(Product.ImageSrc)</th>
+                    <th scope="col">@nameof(Product.NazevProductu)</th>
+                    <th scope="col">@nameof(Product.Kategorie)</th>
+                    <th scope="col">@nameof(Product.Obtiznost)</th>
+                    <th scope="col">@nameof(Product.CasovaNarocnost)</th>
+                    <th scope="col">@nameof(Product.PopisReceptu)</th>
+                    <th scope="col">@nameof(Product.SeznamSurovin)</th>
+                    <th scope="col">@nameof(Product.PostupPripravy)</th>
+                    <th scope="col">@nameof(Product.DatumVytvoreni)</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -26,10 +30,14 @@
                 {
                     <tr>
                         <th scope="row">@Model[i].Id</th>
-                        <td>@Model[i].Name</td>
-                        <td>@Model[i].Description</td>
-                        <td>@Model[i].Price</td>
-                        <td>@Model[i].ImageSrc</td>
+                        <td>@Model[i].NazevProductu</td>
+                        <td>@Model[i].Kategorie</td>
+                        <td>@Model[i].Obtiznost</td>
+                        <td>@Model[i].CasovaNarocnost</td>
+                        <td>@Model[i].PopisReceptu</td>
+                        <td>@Model[i].SeznamSurovin</td>
+                        <td>@Model[i].PostupPripravy</td>
+                        <td>@Model[i].DatumVytvoreni</td>
                         <td><a asp-action="Edit" asp-route-Id="@Model[i].Id">Edit</a></td>
                         <td><a asp-action="Delete" asp-route-Id="@Model[i].Id" onclick="return ConfirmDelete();">Delete</a></td>
                     </tr>

@@ -1,7 +1,7 @@
 ﻿@model Product
 
 @{
-	ViewData["Title"] = "Edit Product";  //TOTO JE VIEW NA EDIT
+	ViewData["Title"] = "Editace receptu";  //TOTO JE VIEW NA EDIT
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -10,21 +10,37 @@
     <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
-        <label class="form-label" asp-for="Name">Name</label>
-        <input class="form-control" asp-for="Name">
+        <label class="form-label">Nazev Receptu</label>
+        <input class="form-control" asp-for="NazevProductu" />
     </div>
     <div class="mb-3">
-        <label class="form-label" asp-for="Description">Description</label>
-        <input class="form-control" asp-for="Description">
+        <label class="form-label">Kategorie</label>
+        <input class="form-control" asp-for="Kategorie">
     </div>
     <div class="mb-3">
-        <label class="form-label" asp-for="Price">Price</label>
-        <input class="form-control" asp-for="Price">
+        <label class="form-label">Obtiznost</label>
+        <input class="form-control" asp-for="Obtiznost">
     </div>
     <div class="mb-3">
-        <label class="form-label" asp-for="ImageSrc">Image Source</label>
-        <input class="form-control" asp-for="ImageSrc">
+        <label class="form-label">CasovaNarocnost</label>
+        <input class="form-control" asp-for="CasovaNarocnost">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Popis</label>
+        <input class="form-control" asp-for="PopisReceptu">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Seznam Surovin</label>
+        <input class="form-control" asp-for="SeznamSurovin">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Postup</label>
+        <input class="form-control" asp-for="PostupPripravy">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Datum Vytvoreni</label>
+        <input class="form-control" asp-for="DatumVytvoreni">
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <button type="submit" class="btn btn-primary">Uložit změny</button>
 </form>

@@ -55,10 +55,14 @@ namespace djanak.Application.Implementation
             if (currentProduct != null) 
             {
                 //Zde změní hodnoty aktuálního produktu na nové
-                currentProduct.Name = product.Name;
-                currentProduct.Description = product.Description;
-                currentProduct.Price = product.Price;
-                currentProduct.ImageSrc = product.ImageSrc;
+                currentProduct.NazevProductu = product.NazevProductu;
+                currentProduct.Kategorie = product.Kategorie;
+                currentProduct.Obtiznost = product.Obtiznost;
+                currentProduct.CasovaNarocnost = product.CasovaNarocnost;
+                currentProduct.PopisReceptu = product.PopisReceptu;
+                currentProduct.SeznamSurovin = product.SeznamSurovin;
+                currentProduct.PostupPripravy = product.PostupPripravy;
+                currentProduct.DatumVytvoreni = product.DatumVytvoreni;
             }
         }
 
