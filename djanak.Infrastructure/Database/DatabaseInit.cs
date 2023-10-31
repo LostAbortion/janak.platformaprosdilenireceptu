@@ -37,15 +37,17 @@ namespace djanak.Infrastructure.Database
                 new Product()
                 {
                     Id = 2,
-                    NazevProductu = "Svíčková s falešnou svíčkovou2",
-                    Kategorie = "Omáčky",
-                    Obtiznost = "Střední",
-                    CasovaNarocnost = "Do hodiny",
-                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "maso, všechno další",
-                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12),
-                    ImageSrc = "/img/products/produkt-01.jpg",
+                    NazevProductu = "Vařené brambory",
+                    Kategorie = "Přílohy",
+                    Obtiznost = "Snadné",
+                    CasovaNarocnost = "40 minut",
+                    PopisReceptu = "Brambory se hodí ke všemu",
+                    SeznamSurovin = "6ks brambory, 1 špetka soli, 1 špetka kmínu",
+                    PostupPripravy = "Brambory oloupeme a dáme do hrnce s vodou." +
+                    "Nakrájíme je na kostky, propláchneme a zalijeme čerstvou vodou. Osolíme, přidáme kmín a dáme vařit." +
+                    "Vaříme 15 minut do změknutí. Zda jsou brambory hotové, poznáme tak, že se po píchnutí vidličkou rozpadnou.",
+                    DatumVytvoreni = new DateTime(2020, 10, 31),
+                    ImageSrc = "/img/products/recept_02.jpg",
                     ImageAlt = "Obrazek2"
                 });
 
@@ -53,48 +55,37 @@ namespace djanak.Infrastructure.Database
                 new Product()
                 {
                     Id = 3,
-                    NazevProductu = "Svíčková s falešnou svíčkovou3",
-                    Kategorie = "Omáčky",
-                    Obtiznost = "Střední",
-                    CasovaNarocnost = "Do hodiny",
-                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "maso, všechno další",
-                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12),
-                    ImageSrc = "/img/products/produkt-01.jpg",
-                    ImageAlt = "Obrazek1"
+                    NazevProductu = "Tuňákové těstoviny",
+                    Kategorie = "Oběd",
+                    Obtiznost = "Snadné",
+                    CasovaNarocnost = "20 minut",
+                    PopisReceptu = "Tuňák je zdravý pro kosti (určitě jo)",
+                    SeznamSurovin = "1ks cibule, olivový olej, 3 stoužky česneku, 1 plechovka loupaných rajčat, pepř, sůl, 180g tuňáka v plechu, strouhaný parmazám," +
+                    "200g těstovin",
+                    PostupPripravy = "Těstoviny uvaříme dle návodu." +
+                    "Na troše olivového oleje necháme zesklovatět nadrobno nakrájenou cibuli. Přidáme na plátky nakrájený česnek, chvilku míchejte." +
+                    "Přidejte rajčata a nakrájené lístky bazalky. Chvíli povařte. Nakonec vmíchejte rozdrobené maso tuňáka," +
+                    "které se snažíme vložit do jídla s minimálním množstvím oleje z konzervy, dochuťte solí/pepřem a nechte maso ve směsi prohřát." +
+                    "Do hotové směsi vmíchejte těstoviny a můžete servírovat. V případě zájmu je možné těstoviny posypat strouhaným parmazánem, není to však třeba.",
+                    DatumVytvoreni = new DateTime(2023, 1, 1),
+                    ImageSrc = "/img/products/recept_03.jpg",
+                    ImageAlt = "Obrazek3"
                 });
 
             products.Add(
                 new Product()
                 {
                     Id = 4,
-                    NazevProductu = "Svíčková s falešnou svíčkovou4",
-                    Kategorie = "Omáčky",
+                    NazevProductu = "Kuřecí prsa s broskvemi a švestkami",
+                    Kategorie = "Oběd",
                     Obtiznost = "Střední",
-                    CasovaNarocnost = "Do hodiny",
-                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "maso, všechno další",
-                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12),
-                    ImageSrc = "/img/products/produkt-01.jpg",
-                    ImageAlt = "Obrazek1"
-                });
-
-            products.Add(
-                new Product()
-                {
-                    Id = 5,
-                    NazevProductu = "Svíčková s falešnou svíčkovou5",
-                    Kategorie = "Omáčky",
-                    Obtiznost = "Střední",
-                    CasovaNarocnost = "Do hodiny",
-                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "maso, všechno další",
-                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12),
-                    ImageSrc = "/img/products/produkt-01.jpg",
-                    ImageAlt = "Obrazek1"
+                    CasovaNarocnost = "40 minut",
+                    PopisReceptu = "Mňam mňam broskvička s masíkem",
+                    SeznamSurovin = "4ks kuřecí prsa, 2 lžíce povidla, 8 plátků šunky, 8ks šarlotky, 8ks švestek, 2ks broskve, olivový olej, sůl, pepř",
+                    PostupPripravy = "Prvně nasekat, pak povařit, pak promíchat. Tenhle recept je hrozně dlouhej, tak jsem ho sem nevkládal celej.",
+                    DatumVytvoreni = new DateTime(2023, 10, 31),
+                    ImageSrc = "/img/products/recept_04.jpg",
+                    ImageAlt = "Obrazek4"
                 });
             
             return products;

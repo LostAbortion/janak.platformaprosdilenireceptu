@@ -53,6 +53,18 @@
       "PackagePath": "staticwebassets\\img\\products\\recept_01.jpg"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_02.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\recept_02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_03.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\recept_03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_04.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\recept_04.jpg"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
       "PackagePath": "staticwebassets\\js\\dialogs.js"
     },
