@@ -20,15 +20,16 @@ namespace djanak.Infrastructure.Database
                 new Product()
                 {
                     Id = 1,
-                    NazevProductu = "Svíčková s falešnou svíčkovou1",
-                    Kategorie = "Omáčky",
-                    Obtiznost = "Střední",
-                    CasovaNarocnost = "Do hodiny",
+                    NazevProductu = "Pražská polévka",
+                    Kategorie = "Oběd",
+                    Obtiznost = "Snadné",
+                    CasovaNarocnost = "30 minut",
                     PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "maso, všechno další",
-                    PostupPripravy = "Prvně nasekat, pak promíchat, pak povařit",
-                    DatumVytvoreni = new DateTime(2022, 12, 12),
-                    ImageSrc = "/img/products/produkt-01.jpg",
+                    SeznamSurovin = "1ks cibule, 1ks mrkev, 2ks brambory, 1ks klobása, 1l vývar, sůl, 2 lžičky sladké papriky, 1 lžíce sádla",
+                    PostupPripravy = "Nakrájenou cibuli necháme 12 minut odležet. Poté ji na sádle zpěníme, přidáme nakrájenou klobásu a opečeme." +
+                    "Přidáme mrkev, orestujeme a poté zasypeme červenou paprikou. Vše zalijeme vývarem, přidáme oloupané, nakrájené brambory, osolíme a polévku vaříme 15 minut.",
+                    DatumVytvoreni = new DateTime(2023, 10, 31),
+                    ImageSrc = "/img/products/recept_01.jpg",
                     ImageAlt = "Obrazek1"
                 });
             
@@ -106,21 +107,21 @@ namespace djanak.Infrastructure.Database
             carousels.Add(new Carousel()
             {
                 Id = 1,
-                ImageSrc = "/img/carousel/carousel-01.jpg",
+                ImageSrc = "/img/carousel/carousel_01.jpg",
                 ImageAlt = "First slide"
             });
 
             carousels.Add(new Carousel()
             {
                 Id = 2,
-                ImageSrc = "/img/carousel/carousel-02.jpg",
+                ImageSrc = "/img/carousel/carousel_02.jpg",
                 ImageAlt = "Second slide"
             });
 
             carousels.Add(new Carousel()
             {
                 Id = 3,
-                ImageSrc = "/img/carousel/carousel-03.jpg",
+                ImageSrc = "/img/carousel/carousel_03.jpg",
                 ImageAlt = "Third slide"
             });
 

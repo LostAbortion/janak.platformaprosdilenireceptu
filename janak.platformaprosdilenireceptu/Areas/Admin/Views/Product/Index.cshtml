@@ -5,7 +5,9 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<a asp-action="Create">Přidat recept</a>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Přidat recept</a>
+
 @{
     <div class="row">
         @foreach (var product in Model)
@@ -22,8 +24,8 @@
                     <!-- Product actions-->
                     <div class="card-footer">
                         <!-- <a class="btn btn-outline-dark" href="#">Add to cart</a> -->
-                        <a asp-action="Edit" asp-route-Id="@product.Id">Edit</a>
-                        <a asp-action="Delete" asp-route-Id="@product.Id" onclick="return ConfirmDelete();">Delete</a>
+                        <a asp-action="Edit" class="btn btn-primary mb-1" style="width: 40%" asp-route-Id="@product.Id">Edit</a>
+                        <a asp-action="Delete" class="btn btn-danger mb-1" style="width: 40%" asp-route-Id="@product.Id" onclick="return ConfirmDelete();">Delete</a>
                     </div>
                 </div>
             </div>
