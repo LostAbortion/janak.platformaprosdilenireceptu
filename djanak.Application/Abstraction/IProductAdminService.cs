@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using djanak.Domain.Entities;
 
+
+// ZDE SE ASI NĚJAKÝM ZPŮSOBEM JENOM DEFINUJE CO DANÝ PROJEKT//IPRODUCTADMINSERVICE UMÍ
 namespace djanak.Application.Abstraction
 {
     public interface IProductAdminService

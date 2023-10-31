@@ -1,12 +1,12 @@
 ﻿@model Product
 
 @{
-	ViewData["Title"] = "Edit Product";
+	ViewData["Title"] = "Edit Product";  //TOTO JE VIEW NA EDIT
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" method="post">  <!-- ROZDÍL JE ZDE V EDIT ACTION-->
     <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">

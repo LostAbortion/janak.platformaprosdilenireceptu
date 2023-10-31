@@ -8,6 +8,7 @@ using djanak.Application.Abstraction;
 using djanak.Domain.Entities;
 using djanak.Infrastructure.Database;
 
+// ZDE SE ACTUALLY PRACUJE S PŘIJATÝMI PŘÍKAZY OD CLIENTA JAKO JE CREATE, DELETE, EDIT
 namespace djanak.Application.Implementation
 {
     public class ProductAdminDFakeService : IProductAdminService

@@ -1,11 +1,11 @@
 ﻿@model Product
 
 @{
-	ViewData["Title"] = "Product - Create";
+	ViewData["Title"] = "Product - Create";  //TOTO JE CREATE VIEW
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Create" method="post">
+<form asp-action="Create" method="post">  <!-- ZDE JE ROZDÍL V CREATE ACTION-->
 	<div class="mb-3">
 		<label class="form-label">Name</label>
 		<input class="form-control" asp-for="Name" />

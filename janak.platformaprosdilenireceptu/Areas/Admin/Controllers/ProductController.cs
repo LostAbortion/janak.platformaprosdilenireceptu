@@ -3,6 +3,11 @@ using djanak.Application.Abstraction;
 using djanak.Domain.Entities;
 using djanak.Infrastructure.Database;
 
+
+// TENHLE PRODUCTCONTROLLER BUDE ASI SLOUŽIT PRO AREU ADMIN PRO PRODUKTY
+// ASI TO BUDE FUNGOVAT TAK ŽE KDYŽ SERVER GETNE OD UŽIVATELE ŽE UŽIVATEL KLIKL NA INDEX (COŽ JE VLASTNĚ DEFAULT PRODUCTS PAGE)
+// NEBO KDYŽ KLIKNE NA DELETE NEBO CREATE NEBO EDIT TAK POTOM TO BUDE REFEROVAT NA PRODUCTADMINDFAKESERVICE.CS
+// A V PRODUCTADMINDFAKESERVICE.CS JSOU DEFINOVANÉ PŘÍMO AKCE CO SE S TÍM MÁ DĚLAT
 namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -37,7 +42,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         {
             bool deleted = _productService.Delete(Id);
 
-            if (deleted)
+            if (deleted)  //ZDE BY BYLO ASI JAKO NĚCO IF DELETED EXISTS TAK....
             {
                 return RedirectToAction(nameof(ProductController.Index));
             }

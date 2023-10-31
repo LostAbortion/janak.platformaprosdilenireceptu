@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using djanak.Domain.Entities;
 
+// ZDE SE PŘÍMO INICIALIZUJE DATABÁZE
+// DO ILIST<PRODUCT> SE PŘIDÁVAJÍ DATA
 namespace djanak.Infrastructure.Database
 {
     internal class DatabaseInit

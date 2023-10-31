@@ -1,5 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";  //TOTO JE "BODY" HOME PAGE, JE TO VE VIEWS HOME,
+                                      //ALE ZBYTEK HTMLKA TU NENÍ,
+                                      //PROTOŽE TEN UŽ JE PŘEDDEFINOVANEJ VE _VIEWSTART.CSHTML KDE JE LAYOUT
 }
 
 @{
@@ -79,7 +81,9 @@
 }
 
 
-@section Styles
+@section Styles  <!-- TATO SEKCE NA JS JE TU EXTRA EXTÉRNĚ PŘIDANÁ PROTO ABY NEBYLA V ZÁKLADNÍM LAYOUTU.
+                      JE TO TU EXTRA PRO HOME PAGE INDEX.CSHTML
+                 -->
     {
     <link rel="stylesheet" href="~/css/shop_home.css" asp-append-version="true" />
 }

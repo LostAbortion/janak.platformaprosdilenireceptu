@@ -4,6 +4,9 @@ using djanak.Application.Abstraction;
 using djanak.Application.ViewModels;
 using janak.platformaprosdilenireceptu.Models;
 
+
+// TENHLE HOMECONTROLLER JE ASI PRO TO ABY POSÍLAL VIEW KDYŽ SE MÁ
+// JINAK NETUŠÍM K ČEMU SLOUŽÍ
 namespace janak.platformaprosdilenireceptu.Controllers
 {
     public class HomeController : Controller
