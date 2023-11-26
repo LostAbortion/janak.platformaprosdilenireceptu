@@ -3655,7 +3655,10 @@
         },
         "runtime": {
           "bin/placeholder/djanak.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "djanak.Infrastructure/1.0.0": {
         "type": "project",

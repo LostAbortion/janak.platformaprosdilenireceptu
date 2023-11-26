@@ -5,7 +5,8 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Create" method="post">  <!-- ZDE JE ROZDÍL V CREATE ACTION-->
+<form asp-action="Create" method="post" enctype="multipart/form-data">     <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
+                                        <!-- enctype je tady kvůli tomu abychom mohli posílat i jiný typ dat než jen text (kvůli uploadu souboru)-->
 	<div class="mb-3">
 		<label class="form-label">Nazev Receptu</label>
 		<input class="form-control" asp-for="NazevProductu" />
@@ -41,6 +42,10 @@
     <div class="mb-3">
         <label class="form-label">Odkaz obrázku</label>
         <input class="form-control" asp-for="ImageSrc">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
     </div>
     <div class="mb-3">
         <label class="form-label">Alternativní adresa obrázku</label>

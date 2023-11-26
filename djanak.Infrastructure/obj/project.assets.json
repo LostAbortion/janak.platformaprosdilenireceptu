@@ -10,7 +10,10 @@
         },
         "runtime": {
           "bin/placeholder/djanak.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
