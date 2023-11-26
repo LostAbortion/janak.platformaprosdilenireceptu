@@ -13,12 +13,19 @@ namespace djanak.Application.Implementation
 {
     public class ProductAdminDFakeService : IProductAdminService
     {
+        IFileUploadService _fileUploadService;  //fileUpload service na přijimání souborů
+
+        public ProductAdminDFakeService(IFileUploadService fileUploadService)
+        {
+            _fileUploadService = fileUploadService;
+        }
+
         public IList<Product> Select()
         {
             return DatabaseFake.Products;
         }
 
-        public void Create(Product product)
+        public async Create(Product product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
         {
             if (DatabaseFake.Products != null && DatabaseFake.Products.Count > 0)
             {
@@ -28,6 +35,9 @@ namespace djanak.Application.Implementation
             {
                 product.Id = 1;
             }
+
+            string imageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
+            product.ImageSrc = imageSource;
 
             if (DatabaseFake.Products != null)
             {
