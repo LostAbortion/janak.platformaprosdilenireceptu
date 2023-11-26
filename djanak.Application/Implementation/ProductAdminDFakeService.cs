@@ -25,7 +25,7 @@ namespace djanak.Application.Implementation
             return DatabaseFake.Products;
         }
 
-        public async Create(Product product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
+        public async void Create(Product product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
         {
             if (DatabaseFake.Products != null && DatabaseFake.Products.Count > 0)
             {
