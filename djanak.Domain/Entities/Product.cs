@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace djanak.Domain.Entities
 {
@@ -20,6 +22,7 @@ namespace djanak.Domain.Entities
         public string PostupPripravy { get; set; }
         public DateTime DatumVytvoreni { get; set; }
         public string ImageSrc { get; set; }
+        public IFormFile Image { get; set; } //přidám zde extra položku pro náš soubor, abych si nemusel mazat můj ImageSrc, který zrovna funguje
         public string ImageAlt { get; set; }
     }
 }
