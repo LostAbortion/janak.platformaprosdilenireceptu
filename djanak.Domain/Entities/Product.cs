@@ -8,12 +8,18 @@ namespace djanak.Domain.Entities
 {
     public class Product : Entity
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string NazevProductu { get; set; }
+        public string Kategorie { get; set; }
         
         //public int CategoryId { get; set; }
 
-        public double Price { get; set; }
+        public string Obtiznost { get; set; }
+        public string CasovaNarocnost { get; set; }
+        public string PopisReceptu {  get; set; }
+        public string SeznamSurovin { get; set; }
+        public string PostupPripravy { get; set; }
+        public DateTime DatumVytvoreni { get; set; }
         public string ImageSrc { get; set; }
+        public string ImageAlt { get; set; }
     }
 }
