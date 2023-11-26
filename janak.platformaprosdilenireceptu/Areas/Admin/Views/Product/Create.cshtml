@@ -1,26 +1,50 @@
 ﻿@model Product
 
 @{
-	ViewData["Title"] = "Product - Create";  //TOTO JE CREATE VIEW
+	ViewData["Title"] = "Přidání receptu";  //TOTO JE CREATE VIEW
 }
 <h1>@ViewData["Title"]</h1>
 
 <form asp-action="Create" method="post">  <!-- ZDE JE ROZDÍL V CREATE ACTION-->
 	<div class="mb-3">
-		<label class="form-label">Name</label>
-		<input class="form-control" asp-for="Name" />
+		<label class="form-label">Nazev Receptu</label>
+		<input class="form-control" asp-for="NazevProductu" />
 	</div>
     <div class="mb-3">
-        <label class="form-label">Description</label>
-        <input class="form-control" asp-for="Description">
+        <label class="form-label">Kategorie</label>
+        <input class="form-control" asp-for="Kategorie">
     </div>
     <div class="mb-3">
-        <label class="form-label">Price</label>
-        <input class="form-control" asp-for="Price">
+        <label class="form-label">Obtiznost</label>
+        <input class="form-control" asp-for="Obtiznost">
     </div>
     <div class="mb-3">
-        <label class="form-label">ImageSrc</label>
+        <label class="form-label">CasovaNarocnost</label>
+        <input class="form-control" asp-for="CasovaNarocnost">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Popis</label>
+        <input class="form-control" asp-for="PopisReceptu">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Seznam Surovin</label>
+        <input class="form-control" asp-for="SeznamSurovin">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Postup</label>
+        <input class="form-control" asp-for="PostupPripravy">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Datum Vytvoreni</label>
+        <input class="form-control" asp-for="DatumVytvoreni">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Odkaz obrázku</label>
         <input class="form-control" asp-for="ImageSrc">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="mb-3">
+        <label class="form-label">Alternativní adresa obrázku</label>
+        <input class="form-control" asp-for="ImageAlt">
+    </div>
+    <button type="submit" class="btn btn-primary">Přidat</button>
 </form>
