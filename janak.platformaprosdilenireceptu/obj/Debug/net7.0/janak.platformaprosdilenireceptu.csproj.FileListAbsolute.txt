@@ -227,3 +227,12 @@ C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformapros
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\djanak.Domain.pdb
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\djanak.Infrastructure.pdb
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\obj\Debug\net7.0\janak.platformaprosdilenireceptu.csproj.CopyComplete
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\System.CodeDom.dll

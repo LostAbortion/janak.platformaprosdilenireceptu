@@ -13,3 +13,5 @@ C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructu
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\refint\djanak.Infrastructure.dll
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.pdb
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\ref\djanak.Infrastructure.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\bin\Debug\net7.0\djanak.Infrastructure.runtimeconfig.json
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Infrastructure\obj\Debug\net7.0\djanak.Infrastructure.genruntimeconfig.cache
