@@ -11,12 +11,17 @@ namespace djanak.Application.Implementation
 {
     public class HomeService : IHomeService
     {
+        EshopDbContext _eshopDbContext;
+        public HomeService(EshopDbContext eshopDbContext)
+        {
+            _eshopDbContext = eshopDbContext;
+        }
         public CarouselProductViewModel GetHomeViewModel()
         {
             CarouselProductViewModel viewModel = new CarouselProductViewModel();
 
-            viewModel.Products = DatabaseFake.Products;
-            viewModel.Carousels = DatabaseFake.Carousels;
+            viewModel.Products = _eshopDbContext.Products.ToList();
+            viewModel.Carousels = _eshopDbContext.Carousels.ToList();
 
             return viewModel;
         }

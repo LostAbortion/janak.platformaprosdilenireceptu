@@ -1,10 +1,17 @@
 using djanak.Application.Abstraction;
 using djanak.Application.Implementation;
+using djanak.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+string connectionString = builder.Configuration.GetConnectionString("MySql");  //propojení s databází 1
+ServerVersion serverVersion = new MySqlServerVersion("8.0.34");  //propojení s databází 2
+
+builder.Services.AddDbContext<EshopDbContext>(optionsBuilder => optionsBuilder.UseMySql(connectionString, serverVersion));  //propojení s databází 3
 
 builder.Services.AddScoped<IFileUploadService, FileUploadService>
     (serviceProvider => new FileUploadService(serviceProvider.GetService<IWebHostEnvironment>().WebRootPath));
