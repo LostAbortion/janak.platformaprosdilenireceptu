@@ -9,3 +9,4 @@ C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\D
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\refint\djanak.Domain.dll
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.pdb
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\ref\djanak.Domain.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\djanak.Domain\obj\Debug\net7.0\djanak.Domain.sourcelink.json

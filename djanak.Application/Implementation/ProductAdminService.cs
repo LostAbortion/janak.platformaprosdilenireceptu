@@ -53,5 +53,10 @@ namespace djanak.Application.Implementation
 
             return deleted;
         }
+
+        public void Edit(Product product)
+        {
+            // Implementace logiky pro editaci produktu
+        }
     }
 }

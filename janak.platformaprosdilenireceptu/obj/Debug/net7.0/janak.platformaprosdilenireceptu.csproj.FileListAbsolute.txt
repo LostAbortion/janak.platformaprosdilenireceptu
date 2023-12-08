@@ -236,3 +236,4 @@ C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformapros
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\MySqlConnector.dll
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu\obj\Debug\net7.0\janak.platformaprosdilenireceptu.sourcelink.json
