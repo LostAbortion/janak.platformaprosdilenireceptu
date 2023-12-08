@@ -18,4 +18,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\djanak.Domain\djanak.Domain.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Migrations\" />
+	</ItemGroup>
 </Project>

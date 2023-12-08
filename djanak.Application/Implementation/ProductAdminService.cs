@@ -54,9 +54,15 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public void Edit(Product product)
+        public void Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
             // Implementace logiky pro editaci produktu
+        }
+
+        public Product GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
+                                               //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
+        {
+            throw new NotImplementedException();
         }
     }
 }
