@@ -29,7 +29,7 @@ namespace djanak.Domain.Entities
         public string SeznamSurovin { get; set; }
         public string PostupPripravy { get; set; }
         public DateTime DatumVytvoreni { get; set; }
-        [Required] // -> zde ten required bude znamenat že MUSÍM povinně přidat obrázek k mému receptu (asi teda)
+        //[Required] // -> zde ten required bude znamenat že MUSÍM povinně přidat obrázek k mému receptu (asi teda)
         public string? ImageSrc { get; set; }
         [NotMapped] // -> Toto myslím vysvětlovat tak že SQL není schopná přijmout adresu obrázku nebo tak něco. A tohle z toho prostě udělá nějakou
                     // bitovou řadu a pak to pujde

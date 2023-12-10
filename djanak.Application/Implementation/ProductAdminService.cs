@@ -56,13 +56,30 @@ namespace djanak.Application.Implementation
 
         public void Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
-            // Implementace logiky pro editaci produktu
+            Product currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
+
+            if (currentProduct != null)
+            {
+                //Zde změní hodnoty aktuálního produktu na nové
+                currentProduct.NazevProductu = product.NazevProductu;
+                currentProduct.Kategorie = product.Kategorie;
+                currentProduct.Obtiznost = product.Obtiznost;
+                currentProduct.CasovaNarocnost = product.CasovaNarocnost;
+                currentProduct.PopisReceptu = product.PopisReceptu;
+                currentProduct.SeznamSurovin = product.SeznamSurovin;
+                currentProduct.PostupPripravy = product.PostupPripravy;
+                currentProduct.DatumVytvoreni = product.DatumVytvoreni;
+                currentProduct.ImageSrc = product.ImageSrc;
+                currentProduct.ImageAlt = product.ImageAlt;
+
+                _eshopDbContext.SaveChanges();
+            }
         }
 
         public Product GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
                                                //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
         {
-            throw new NotImplementedException();
+            return _eshopDbContext.Products.FirstOrDefault(p => p.Id == id);  
         }
     }
 }

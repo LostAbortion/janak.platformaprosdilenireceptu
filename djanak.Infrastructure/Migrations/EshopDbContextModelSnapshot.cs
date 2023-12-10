@@ -127,7 +127,6 @@ namespace djanak.Infrastructure.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("ImageSrc")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Kategorie")

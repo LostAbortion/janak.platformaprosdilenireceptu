@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("janak.platformaprosdilenireceptu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2c5175556cfdb43b5002c63692174a38164110c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01a6f3bbcab2fdab2ac0cf693f25b578c214437e")]
 [assembly: System.Reflection.AssemblyProductAttribute("janak.platformaprosdilenireceptu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("janak.platformaprosdilenireceptu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
