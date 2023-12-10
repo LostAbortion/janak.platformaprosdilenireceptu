@@ -33,9 +33,16 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Product product)
         {
-            await _productService.Create(product);
+            if (ModelState.IsValid)
+            {
+                await _productService.Create(product);
 
-            return RedirectToAction(nameof(ProductController.Index));
+                return RedirectToAction(nameof(ProductController.Index));
+            }
+            else
+            {
+                return View(product);
+            }
         }
 
         public IActionResult Delete(int Id)

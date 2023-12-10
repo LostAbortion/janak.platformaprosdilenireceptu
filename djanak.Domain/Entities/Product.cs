@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using djanak.Domain.Validations;
 
 namespace djanak.Domain.Entities
 {
@@ -33,6 +34,7 @@ namespace djanak.Domain.Entities
         public string? ImageSrc { get; set; }
         [NotMapped] // -> Toto myslím vysvětlovat tak že SQL není schopná přijmout adresu obrázku nebo tak něco. A tohle z toho prostě udělá nějakou
                     // bitovou řadu a pak to pujde
+        [FileContent("image")]
         public IFormFile Image { get; set; } //přidám zde extra položku pro náš soubor, abych si nemusel mazat můj ImageSrc, který zrovna funguje
         public string ImageAlt { get; set; }
     }

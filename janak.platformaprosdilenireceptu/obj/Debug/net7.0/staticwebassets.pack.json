@@ -53,8 +53,16 @@
       "PackagePath": "staticwebassets\\js\\dialogs.js"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\jquery.validation.decimalseparator.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validation.decimalseparator.js"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\validations\\FileContentValidation.js",
+      "PackagePath": "staticwebassets\\js\\validations\\FileContentValidation.js"
     },
     {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\lib\\bootstrap\\LICENSE",
