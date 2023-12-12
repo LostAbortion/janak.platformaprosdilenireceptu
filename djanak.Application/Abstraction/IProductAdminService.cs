@@ -14,7 +14,7 @@ namespace djanak.Application.Abstraction
         IList<Product> Select();
         Task Create(Product product);
         bool Delete(int id);
-        void Edit(Product product);
+        Task Edit(Product product);
         Product GetProductById(int id);
     }
 }

@@ -54,7 +54,7 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public void Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
+        public async Task Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
             Product currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
 
@@ -71,6 +71,12 @@ namespace djanak.Application.Implementation
                 currentProduct.DatumVytvoreni = product.DatumVytvoreni;
                 currentProduct.ImageSrc = product.ImageSrc;
                 currentProduct.ImageAlt = product.ImageAlt;
+
+                if (product.Image != null)
+                {
+                    string newImageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
+                    currentProduct.ImageSrc = newImageSource;
+                }
 
                 _eshopDbContext.SaveChanges(); // Uložení změn do databáze
             }

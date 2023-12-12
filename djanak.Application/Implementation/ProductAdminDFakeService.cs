@@ -58,11 +58,11 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public void Edit(Product product)
+        public async Task Edit(Product product)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
         {
             Product currentProduct = DatabaseFake.Products.FirstOrDefault(p => p.Id == product.Id);
 
-            if (currentProduct != null) 
+            if (currentProduct != null)
             {
                 //Zde změní hodnoty aktuálního produktu na nové
                 currentProduct.NazevProductu = product.NazevProductu;

@@ -73,9 +73,9 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Product product)
+        public async Task<IActionResult> Edit(Product product)
         {
-            _productService.Edit(product);
+            await _productService.Edit(product);
 
             return RedirectToAction(nameof(Index));
         }
