@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("djanak.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+750869604775319dcbd4dcc8b1e7a950bbf02096")]
 [assembly: System.Reflection.AssemblyProductAttribute("djanak.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("djanak.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
