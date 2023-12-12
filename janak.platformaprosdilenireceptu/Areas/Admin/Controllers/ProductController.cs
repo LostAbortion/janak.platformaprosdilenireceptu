@@ -2,6 +2,8 @@
 using djanak.Application.Abstraction;
 using djanak.Domain.Entities;
 using djanak.Infrastructure.Database;
+using djanak.Infrastructure.Identity.Enums;
+using Microsoft.AspNetCore.Authorization;
 
 
 // TENHLE PRODUCTCONTROLLER BUDE ASI SLOUŽIT PRO AREU ADMIN PRO PRODUKTY
@@ -11,6 +13,7 @@ using djanak.Infrastructure.Database;
 namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]
     public class ProductController : Controller
     {
         IProductAdminService _productService;

@@ -2,6 +2,8 @@ using djanak.Application.Abstraction;
 using djanak.Application.Implementation;
 using djanak.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using djanak.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,38 @@ builder.Services.AddControllersWithViews();
 
 string connectionString = builder.Configuration.GetConnectionString("MySql");  //propojení s databází 1
 ServerVersion serverVersion = new MySqlServerVersion("8.0.34");  //propojení s databází 2
+
+//Odtud potud Identity a roles
+builder.Services.AddIdentity<User, Role>()
+				.AddEntityFrameworkStores<EshopDbContext>()
+				.AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+	options.Password.RequireDigit = false;
+	options.Password.RequiredLength = 1;
+	options.Password.RequireNonAlphanumeric = false;
+	options.Password.RequireUppercase = false;
+	options.Password.RequireLowercase = false;
+	options.Password.RequiredUniqueChars = 1;
+	options.Lockout.AllowedForNewUsers = true;
+	options.Lockout.MaxFailedAccessAttempts = 10;
+	options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+	options.User.RequireUniqueEmail = true;
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.Cookie.HttpOnly = true;
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+	options.LoginPath = "/Security/Account/Login";
+	options.LogoutPath = "/Security/Account/Logout";
+	options.SlidingExpiration = true;
+});
+
+
+builder.Services.AddScoped<IAccountService, AccountIdentityService>();
+//Odtud potud Identity a roles
 
 builder.Services.AddDbContext<EshopDbContext>(optionsBuilder => optionsBuilder.UseMySql(connectionString, serverVersion));  //propojení s databází 3
 
