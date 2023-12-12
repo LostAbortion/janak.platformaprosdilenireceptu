@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\img\\carousel\\carousel_03.jpg"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf",
+      "PackagePath": "staticwebassets\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\ratatoile.jpg",
       "PackagePath": "staticwebassets\\img\\products\\ratatoile.jpg"
     },
@@ -49,12 +53,24 @@
       "PackagePath": "staticwebassets\\img\\products\\recept_04.jpg"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\tiger-jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\tiger-jpg.jpg"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
       "PackagePath": "staticwebassets\\js\\dialogs.js"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\jquery.validation.decimalseparator.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validation.decimalseparator.js"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\validations\\FileContentValidation.js",
+      "PackagePath": "staticwebassets\\js\\validations\\FileContentValidation.js"
     },
     {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\lib\\bootstrap\\LICENSE",

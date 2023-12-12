@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+Bov61sUDIPUPLJ65Y83H25KzI32mDfsxjRW2oX+WmQ=",
+  "Hash": "FtLTE8ayN47aqSkv8UOOl+jsFu1Nqogk6Xvee0jQZZs=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -169,6 +169,25 @@
       "OriginalItemSpec": "wwwroot\\img\\carousel\\carousel_03.jpg"
     },
     {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "img/products/navod_student_doplneni_tematu2023 (1).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf"
+    },
+    {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\ratatoile.jpg",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
@@ -264,6 +283,25 @@
       "OriginalItemSpec": "wwwroot\\img\\products\\recept_04.jpg"
     },
     {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\tiger-jpg.jpg",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "img/products/tiger-jpg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\tiger-jpg.jpg"
+    },
+    {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
@@ -283,6 +321,25 @@
       "OriginalItemSpec": "wwwroot\\js\\dialogs.js"
     },
     {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\jquery.validation.decimalseparator.js",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "js/jquery.validation.decimalseparator.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.validation.decimalseparator.js"
+    },
+    {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\site.js",
       "SourceId": "janak.platformaprosdilenireceptu",
       "SourceType": "Discovered",
@@ -300,6 +357,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\validations\\FileContentValidation.js",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "js/validations/FileContentValidation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validations\\FileContentValidation.js"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

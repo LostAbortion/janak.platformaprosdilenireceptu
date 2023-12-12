@@ -54,13 +54,17 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public void Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
+        public async Task Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
             Product currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
 
             if (currentProduct != null)
             {
+<<<<<<< HEAD
                 //Zde změní hodnoty aktuálního produktu na nové
+=======
+                // Změna hodnot aktuálního produktu na nové
+>>>>>>> 10tyden_pridavek
                 currentProduct.NazevProductu = product.NazevProductu;
                 currentProduct.Kategorie = product.Kategorie;
                 currentProduct.Obtiznost = product.Obtiznost;
@@ -72,14 +76,28 @@ namespace djanak.Application.Implementation
                 currentProduct.ImageSrc = product.ImageSrc;
                 currentProduct.ImageAlt = product.ImageAlt;
 
+<<<<<<< HEAD
                 _eshopDbContext.SaveChanges();
+=======
+                if (product.Image != null)
+                {
+                    string newImageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
+                    currentProduct.ImageSrc = newImageSource;
+                }
+
+                _eshopDbContext.SaveChanges(); // Uložení změn do databáze
+>>>>>>> 10tyden_pridavek
             }
         }
 
         public Product GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
                                                //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
         {
+<<<<<<< HEAD
             return _eshopDbContext.Products.FirstOrDefault(p => p.Id == id);  
+=======
+            return _eshopDbContext.Products.FirstOrDefault(p => p.Id == id);
+>>>>>>> 10tyden_pridavek
         }
     }
 }
