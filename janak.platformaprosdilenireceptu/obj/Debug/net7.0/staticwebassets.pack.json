@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\janak.platformaprosdilenireceptu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\shop_home.css",
       "PackagePath": "staticwebassets\\css\\shop_home.css"
     },

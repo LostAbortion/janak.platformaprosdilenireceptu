@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FtLTE8ayN47aqSkv8UOOl+jsFu1Nqogk6Xvee0jQZZs=",
+  "Hash": "+J/NCjqGh81kQZo8bP6jM+TAHIXOxQcq/ZDyKvlIQ9c=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\janak.platformaprosdilenireceptu.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\login.css",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\shop_home.css",
