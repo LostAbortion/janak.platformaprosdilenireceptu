@@ -6,6 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Security\Views\Account\_ViewImports.cshtml" />
+    <Content Remove="Areas\Admin\Security\Views\Account\_ViewStart.cshtml" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<ProjectReference Include="..\djanak.Application\djanak.Application.csproj" />
 		<ProjectReference Include="..\djanak.Domain\djanak.Domain.csproj" />
