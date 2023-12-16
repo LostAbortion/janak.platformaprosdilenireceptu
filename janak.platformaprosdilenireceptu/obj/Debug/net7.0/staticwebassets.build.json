@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+J/NCjqGh81kQZo8bP6jM+TAHIXOxQcq/ZDyKvlIQ9c=",
+  "Hash": "R/+fpPa3TarNmpCVAn3eKSgGIhyU7d446mNoAhGFpJc=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -186,25 +186,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\carousel\\carousel_03.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf",
-      "SourceId": "janak.platformaprosdilenireceptu",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
-      "BasePath": "_content/janak.platformaprosdilenireceptu",
-      "RelativePath": "img/products/navod_student_doplneni_tematu2023 (1).pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\products\\navod_student_doplneni_tematu2023 (1).pdf"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\ratatoile.jpg",

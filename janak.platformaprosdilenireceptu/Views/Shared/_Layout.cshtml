@@ -31,6 +31,8 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         @if (User.Identity.IsAuthenticated == true && (User.IsInRole(nameof(Roles.Admin)) || User.IsInRole(nameof(Roles.Manager))))  //změna s Identity
+                            //tento řádek určuje že Products se zobrazí pouze pokud je user zautentikován, toto ale změním aby to tady nebylo, protože to uvidí vždy
+                            //tuto logiku si ale chci nechat, protože mi to bude sloužit na edit a mazání produktů pro Adminy a Manažery
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
@@ -39,6 +41,8 @@
                     </ul>
                 </div>
                 @{  //přídavek s Identity
+                    //tento if znamená co se zobrazí v horním řádku pokud je někdo přihlášený a nebo nikoliv
+                    //toto bych taky mohl pozměnit aby to buďto bylo jednodušší a nebo smysluplnější pro můj počin který potřebuju
                     @if (User.Identity.IsAuthenticated == false)
                     {
                         <ul class="navbar-nav navbar-right">
