@@ -175,7 +175,7 @@ namespace djanak.Infrastructure.Database
                 Email = "admin@admin.cz",
                 NormalizedEmail = "ADMIN@ADMIN.CZ",
                 EmailConfirmed = true,
-                PasswordHash = "AQAAAAEAACcQAAAAEM9O98Suoh2o2JOK1ZOJScgOfQ21odn/k6EYUpGWnrbevCaBFFXrNL7JZxHNczhh/w==",
+                PasswordHash = "AQAAAAEAACcQAAAAEM9O98Suoh2o2JOK1ZOJScgOfQ21odn/k6EYUpGWnrbevCaBFFXrNL7JZxHNczhh/w==",  //heslo je: abc
                 SecurityStamp = "SEJEPXC646ZBNCDYSM3H5FRK5RWP2TN6",
                 ConcurrencyStamp = "b09a83ae-cfd3-4ee7-97e6-fbcf0b0fe78c",
                 PhoneNumber = null,
@@ -221,7 +221,7 @@ namespace djanak.Infrastructure.Database
                 Email = "manager@manager.cz",
                 NormalizedEmail = "MANAGER@MANAGER.CZ",
                 EmailConfirmed = true,
-                PasswordHash = "AQAAAAEAACcQAAAAEOzeajp5etRMZn7TWj9lhDMJ2GSNTtljLWVIWivadWXNMz8hj6mZ9iDR+alfEUHEMQ==",
+                PasswordHash = "AQAAAAEAACcQAAAAEOzeajp5etRMZn7TWj9lhDMJ2GSNTtljLWVIWivadWXNMz8hj6mZ9iDR+alfEUHEMQ==",  //heslo je: abc
                 SecurityStamp = "MAJXOSATJKOEM4YFF32Y5G2XPR5OFEL6",
                 ConcurrencyStamp = "7a8d96fd-5918-441b-b800-cbafa99de97b",
                 PhoneNumber = null,
