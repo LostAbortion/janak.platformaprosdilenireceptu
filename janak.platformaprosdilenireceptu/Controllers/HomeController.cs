@@ -22,7 +22,7 @@ namespace janak.platformaprosdilenireceptu.Controllers
 
         public IActionResult Index()
         {
-            CarouselProductViewModel viewModel = _homeService.GetHomeViewModel();
+            CarouselReceptViewModel viewModel = _homeService.GetHomeViewModel();
             return View(viewModel);
         }
 

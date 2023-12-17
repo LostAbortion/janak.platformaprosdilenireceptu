@@ -1,4 +1,4 @@
-﻿@model CarouselProductViewModel
+﻿@model CarouselReceptViewModel
 
 @{
     ViewData["Title"] = "Home Page";  //TOTO JE "BODY" HOME PAGE, JE TO VE VIEWS HOME,
@@ -41,24 +41,24 @@
 }
 
 @{
-    if (Model != null && Model.Products != null && Model.Products.Count > 0)
+    if (Model != null && Model.Recepts != null && Model.Recepts.Count > 0)
     {
 
         <section class="py-2">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-4 justify-content-start">
 
-                    @for (int i = 0; i < Model.Products.Count; ++i)
+                    @for (int i = 0; i < Model.Recepts.Count; ++i)
                     {
                         <div class="col mb-5">
                             <div class="card h-100" style="width: 100%;">
                                 <!-- Product image-->
-                                <img class="card-img-top" src="@Model.Products[i].ImageSrc" alt="@Model.Products[i].ImageAlt" />
+                                <img class="card-img-top" src="@Model.Recepts[i].ImageSrc" alt="@Model.Recepts[i].ImageAlt" />
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <!-- Product name-->
-                                        <h5 class="fw-bolder">@Model.Products[i].NazevProductu</h5>
+                                        <h5 class="fw-bolder">@Model.Recepts[i].NazevProductu</h5>
                                         <!-- Product reviews, zatím tam nic není a je to jenom výplň na hovno-->
                                         <div class="d-flex justify-content-center small text-warning mb-2">
                                             <div class="bi-star-fill"></div>
@@ -69,7 +69,7 @@
                                         </div>
                                         <!-- Product popis receptu-->
                                         <div>
-                                            @Model.Products[i].PopisReceptu
+                                            @Model.Recepts[i].PopisReceptu
                                         </div>
                                     </div>
                                 </div>

@@ -7,9 +7,9 @@ using djanak.Domain.Entities;
 
 namespace djanak.Application.ViewModels
 {
-    public class CarouselProductViewModel
+    public class CarouselReceptViewModel
     {
         public IList<Carousel> Carousels {  get; set; }
-        public IList<Recept> Products { get; set; }
+        public IList<Recept> Recepts { get; set; }
     }
 }

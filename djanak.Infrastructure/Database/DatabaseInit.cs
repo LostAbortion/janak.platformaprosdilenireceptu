@@ -14,12 +14,12 @@ namespace djanak.Infrastructure.Database
 {
     internal class DatabaseInit
     {
-        public IList<Recept> GetProducts()
+        public IList<Recept> GetRecepts()
         {
-            IList<Recept> products = new List<Recept>();
+            IList<Recept> recepts = new List<Recept>();
 
 
-            products.Add(
+            recepts.Add(
                 new Recept()
                 {
                     Id = 1,
@@ -36,7 +36,7 @@ namespace djanak.Infrastructure.Database
                     ImageAlt = "Obrazek1"
                 });
             
-            products.Add(
+            recepts.Add(
                 new Recept()
                 {
                     Id = 2,
@@ -54,7 +54,7 @@ namespace djanak.Infrastructure.Database
                     ImageAlt = "Obrazek2"
                 });
 
-            products.Add(
+            recepts.Add(
                 new Recept()
                 {
                     Id = 3,
@@ -75,7 +75,7 @@ namespace djanak.Infrastructure.Database
                     ImageAlt = "Obrazek3"
                 });
 
-            products.Add(
+            recepts.Add(
                 new Recept()
                 {
                     Id = 4,
@@ -91,7 +91,7 @@ namespace djanak.Infrastructure.Database
                     ImageAlt = "Obrazek4"
                 });
             
-            return products;
+            return recepts;
         }
 
         public IList<Carousel> GetCarousels()

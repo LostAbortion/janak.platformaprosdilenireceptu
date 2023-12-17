@@ -11,7 +11,7 @@ using djanak.Infrastructure.Database;
 // ZDE SE ACTUALLY PRACUJE S PŘIJATÝMI PŘÍKAZY OD CLIENTA JAKO JE CREATE, DELETE, EDIT
 namespace djanak.Application.Implementation
 {
-    public class ProductAdminDFakeService : IProductAdminService
+    public class ProductAdminDFakeService : IReceptAdminService
     {
         IFileUploadService _fileUploadService;  //fileUpload service na přijimání souborů
 
@@ -22,65 +22,65 @@ namespace djanak.Application.Implementation
 
         public IList<Recept> Select()
         {
-            return DatabaseFake.Products;
+            return DatabaseFake.Recepts;
         }
 
-        public async Task Create(Recept product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
+        public async Task Create(Recept recept)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
         {
-            if (DatabaseFake.Products != null && DatabaseFake.Products.Count > 0)
+            if (DatabaseFake.Recepts != null && DatabaseFake.Recepts.Count > 0)
             {
-                product.Id = DatabaseFake.Products.Last().Id + 1;
+                recept.Id = DatabaseFake.Recepts.Last().Id + 1;
             }
             else
             {
-                product.Id = 1;
+                recept.Id = 1;
             }
 
-            string imageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
-            product.ImageSrc = imageSource;
+            string imageSource = await _fileUploadService.FileUploadAsync(recept.Image, Path.Combine("img", "products"));
+            recept.ImageSrc = imageSource;
 
-            if (DatabaseFake.Products != null)
+            if (DatabaseFake.Recepts != null)
             {
-                DatabaseFake.Products.Add(product);
+                DatabaseFake.Recepts.Add(recept);
             }
         }
         public bool Delete(int id)
         {
             bool deleted = false;
 
-            Recept? product = DatabaseFake.Products.FirstOrDefault(product => product.Id == id);
+            Recept? recept = DatabaseFake.Recepts.FirstOrDefault(recept => recept.Id == id);
 
-            if (product != null)
+            if (recept != null)
             {
-                deleted = DatabaseFake.Products.Remove(product);
+                deleted = DatabaseFake.Recepts.Remove(recept);
             }
 
             return deleted;
         }
 
-        public async Task Edit(Recept product)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
+        public async Task Edit(Recept recept)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
         {
-            Recept currentProduct = DatabaseFake.Products.FirstOrDefault(p => p.Id == product.Id);
+            Recept currentProduct = DatabaseFake.Recepts.FirstOrDefault(p => p.Id == recept.Id);
 
             if (currentProduct != null)
             {
                 //Zde změní hodnoty aktuálního produktu na nové
-                currentProduct.NazevProductu = product.NazevProductu;
-                currentProduct.Kategorie = product.Kategorie;
-                currentProduct.Obtiznost = product.Obtiznost;
-                currentProduct.CasovaNarocnost = product.CasovaNarocnost;
-                currentProduct.PopisReceptu = product.PopisReceptu;
-                currentProduct.SeznamSurovin = product.SeznamSurovin;
-                currentProduct.PostupPripravy = product.PostupPripravy;
-                currentProduct.DatumVytvoreni = product.DatumVytvoreni;
-                currentProduct.ImageSrc = product.ImageSrc;
-                currentProduct.ImageAlt = product.ImageAlt;
+                currentProduct.NazevProductu = recept.NazevProductu;
+                currentProduct.Kategorie = recept.Kategorie;
+                currentProduct.Obtiznost = recept.Obtiznost;
+                currentProduct.CasovaNarocnost = recept.CasovaNarocnost;
+                currentProduct.PopisReceptu = recept.PopisReceptu;
+                currentProduct.SeznamSurovin = recept.SeznamSurovin;
+                currentProduct.PostupPripravy = recept.PostupPripravy;
+                currentProduct.DatumVytvoreni = recept.DatumVytvoreni;
+                currentProduct.ImageSrc = recept.ImageSrc;
+                currentProduct.ImageAlt = recept.ImageAlt;
             }
         }
 
-        public Recept GetProductById(int id)
+        public Recept GetReceptById(int id)
         {
-            return DatabaseFake.Products.FirstOrDefault(prod => prod.Id == id);
+            return DatabaseFake.Recepts.FirstOrDefault(prod => prod.Id == id);
         }
     }
 }

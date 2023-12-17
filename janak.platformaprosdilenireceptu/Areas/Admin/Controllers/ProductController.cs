@@ -13,11 +13,11 @@ using Microsoft.AspNetCore.Authorization;
 namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]  //tento řádek jsem zakomentoval. Blokoval mě od rozkliknutí Products
+    //[Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]  //tento řádek jsem zakomentoval. Blokoval mě od rozkliknutí Recepts
     public class ProductController : Controller
     {
-        IProductAdminService _productService;
-        public ProductController(IProductAdminService productService)
+        IReceptAdminService _productService;
+        public ProductController(IReceptAdminService productService)
         {
             _productService = productService;
         }
@@ -65,7 +65,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            Recept product = _productService.GetProductById(id);
+            Recept product = _productService.GetReceptById(id);
 
             if (product == null) 
             {

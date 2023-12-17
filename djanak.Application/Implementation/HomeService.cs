@@ -16,11 +16,11 @@ namespace djanak.Application.Implementation
         {
             _eshopDbContext = eshopDbContext;
         }
-        public CarouselProductViewModel GetHomeViewModel()
+        public CarouselReceptViewModel GetHomeViewModel()
         {
-            CarouselProductViewModel viewModel = new CarouselProductViewModel();
+            CarouselReceptViewModel viewModel = new CarouselReceptViewModel();
 
-            viewModel.Products = _eshopDbContext.Products.ToList();
+            viewModel.Recepts = _eshopDbContext.Recepts.ToList();
             viewModel.Carousels = _eshopDbContext.Carousels.ToList();
 
             return viewModel;

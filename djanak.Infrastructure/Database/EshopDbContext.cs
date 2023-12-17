@@ -14,7 +14,7 @@ namespace djanak.Infrastructure.Database
 {
     public class EshopDbContext : IdentityDbContext<User, Role, int>
     {
-        public DbSet<Recept> Products { get; set; }
+        public DbSet<Recept> Recepts { get; set; }
         public DbSet<Carousel> Carousels { get; set; }
 
         public DbSet<Order> Orders { get; set; }
@@ -29,7 +29,7 @@ namespace djanak.Infrastructure.Database
             base.OnModelCreating(modelBuilder);
 
             DatabaseInit dbInit = new DatabaseInit();
-            modelBuilder.Entity<Recept>().HasData(dbInit.GetProducts());
+            modelBuilder.Entity<Recept>().HasData(dbInit.GetRecepts());
             modelBuilder.Entity<Carousel>().HasData(dbInit.GetCarousels());
 
 

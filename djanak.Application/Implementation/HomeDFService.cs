@@ -11,11 +11,11 @@ namespace djanak.Application.Implementation
 {
     public class HomeDFService : IHomeService
     {
-        public CarouselProductViewModel GetHomeViewModel()
+        public CarouselReceptViewModel GetHomeViewModel()
         {
-            CarouselProductViewModel viewModel = new CarouselProductViewModel();
+            CarouselReceptViewModel viewModel = new CarouselReceptViewModel();
 
-            viewModel.Products = DatabaseFake.Products;
+            viewModel.Recepts = DatabaseFake.Recepts;
             viewModel.Carousels = DatabaseFake.Carousels;
 
             return viewModel;

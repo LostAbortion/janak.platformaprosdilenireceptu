@@ -50,8 +50,8 @@ builder.Services.AddDbContext<EshopDbContext>(optionsBuilder => optionsBuilder.U
 builder.Services.AddScoped<IFileUploadService, FileUploadService>
     (serviceProvider => new FileUploadService(serviceProvider.GetService<IWebHostEnvironment>().WebRootPath));
 
-builder.Services.AddScoped<IProductAdminService, ProductAdminService>();//tento øádek propojuje moje interakce IProductAdminService s ProductAdminDFakeService
-                                                                        //Pøepíšu to na ProductAdminService a tím to napojím místo fake na reálnou databázi
+builder.Services.AddScoped<IReceptAdminService, ReceptAdminService>();//tento øádek propojuje moje interakce IReceptAdminService s ProductAdminDFakeService
+                                                                        //Pøepíšu to na ReceptAdminService a tím to napojím místo fake na reálnou databázi
 builder.Services.AddScoped<IHomeService, HomeService>();
 
 var app = builder.Build();

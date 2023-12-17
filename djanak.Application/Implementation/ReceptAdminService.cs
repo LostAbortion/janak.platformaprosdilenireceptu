@@ -9,12 +9,12 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Application.Implementation
 {
-    public class ProductAdminService : IProductAdminService
+    public class ReceptAdminService : IReceptAdminService
     {
         IFileUploadService _fileUploadService;
         EshopDbContext _eshopDbContext;
 
-        public ProductAdminService(IFileUploadService fileUploadService, EshopDbContext eshopDbContext)
+        public ReceptAdminService(IFileUploadService fileUploadService, EshopDbContext eshopDbContext)
         {
             _fileUploadService = fileUploadService;
             _eshopDbContext = eshopDbContext;
@@ -22,7 +22,7 @@ namespace djanak.Application.Implementation
 
         public IList<Recept> Select()
         {
-            return _eshopDbContext.Products.ToList();
+            return _eshopDbContext.Recepts.ToList();
         }
 
         public async Task Create(Recept product)
@@ -30,9 +30,9 @@ namespace djanak.Application.Implementation
             string imageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
             product.ImageSrc = imageSource;
 
-            if (_eshopDbContext.Products != null)
+            if (_eshopDbContext.Recepts != null)
             {
-                _eshopDbContext.Products.Add(product);
+                _eshopDbContext.Recepts.Add(product);
                 _eshopDbContext.SaveChanges();
             }
         }
@@ -41,11 +41,11 @@ namespace djanak.Application.Implementation
         {
             bool deleted = false;
 
-            Recept? product = _eshopDbContext.Products.FirstOrDefault(product => product.Id == id);
+            Recept? product = _eshopDbContext.Recepts.FirstOrDefault(product => product.Id == id);
 
             if (product != null)
             {
-                _eshopDbContext.Products.Remove(product);
+                _eshopDbContext.Recepts.Remove(product);
                 _eshopDbContext.SaveChanges();
 
                 deleted = true;
@@ -56,7 +56,7 @@ namespace djanak.Application.Implementation
 
         public async Task Edit(Recept product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
-            Recept currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
+            Recept currentProduct = _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == product.Id);
 
             if (currentProduct != null)
             {
@@ -85,10 +85,10 @@ namespace djanak.Application.Implementation
             }
         }
 
-        public Recept GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
+        public Recept GetReceptById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
                                                //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
         {
-            return _eshopDbContext.Products.FirstOrDefault(p => p.Id == id);  
+            return _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == id);  
         }
     }
 }

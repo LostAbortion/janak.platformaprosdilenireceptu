@@ -12,12 +12,12 @@ namespace djanak.Infrastructure.Database
 {
     public class DatabaseFake
     {
-        public static List<Recept> Products { get; set; }
+        public static List<Recept> Recepts { get; set; }
         public static List<Carousel> Carousels { get; set; }
         static DatabaseFake()
         {
             DatabaseInit dbInit = new DatabaseInit();
-            Products = dbInit.GetProducts().ToList();
+            Recepts = dbInit.GetRecepts().ToList();
             Carousels = dbInit.GetCarousels().ToList();
         }
     }

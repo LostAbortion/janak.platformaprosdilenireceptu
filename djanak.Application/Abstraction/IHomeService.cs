@@ -9,6 +9,6 @@ namespace djanak.Application.Abstraction
 {
     public interface IHomeService
     {
-        CarouselProductViewModel GetHomeViewModel();
+        CarouselReceptViewModel GetHomeViewModel();
     }
 }

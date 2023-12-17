@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using djanak.Domain.Entities;
 
 
-// ZDE SE ASI NĚJAKÝM ZPŮSOBEM JENOM DEFINUJE CO DANÝ PROJEKT//IPRODUCTADMINSERVICE UMÍ
+// ZDE SE ASI NĚJAKÝM ZPŮSOBEM JENOM DEFINUJE CO DANÝ PROJEKT//IRECEPTADMINSERVICE UMÍ
 namespace djanak.Application.Abstraction
 {
-    public interface IProductAdminService
+    public interface IReceptAdminService
     {
         IList<Recept> Select();
-        Task Create(Recept product);
+        Task Create(Recept recept);
         bool Delete(int id);
-        Task Edit(Recept product);
-        Recept GetProductById(int id);
+        Task Edit(Recept recept);
+        Recept GetReceptById(int id);
     }
 }
