@@ -20,12 +20,12 @@ namespace djanak.Application.Implementation
             _fileUploadService = fileUploadService;
         }
 
-        public IList<Product> Select()
+        public IList<Recept> Select()
         {
             return DatabaseFake.Products;
         }
 
-        public async Task Create(Product product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
+        public async Task Create(Recept product)  //z create metody jsme udělali async. Kvůli uploadu našeho souboru
         {
             if (DatabaseFake.Products != null && DatabaseFake.Products.Count > 0)
             {
@@ -48,7 +48,7 @@ namespace djanak.Application.Implementation
         {
             bool deleted = false;
 
-            Product? product = DatabaseFake.Products.FirstOrDefault(product => product.Id == id);
+            Recept? product = DatabaseFake.Products.FirstOrDefault(product => product.Id == id);
 
             if (product != null)
             {
@@ -58,9 +58,9 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public async Task Edit(Product product)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
+        public async Task Edit(Recept product)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
         {
-            Product currentProduct = DatabaseFake.Products.FirstOrDefault(p => p.Id == product.Id);
+            Recept currentProduct = DatabaseFake.Products.FirstOrDefault(p => p.Id == product.Id);
 
             if (currentProduct != null)
             {
@@ -78,7 +78,7 @@ namespace djanak.Application.Implementation
             }
         }
 
-        public Product GetProductById(int id)
+        public Recept GetProductById(int id)
         {
             return DatabaseFake.Products.FirstOrDefault(prod => prod.Id == id);
         }

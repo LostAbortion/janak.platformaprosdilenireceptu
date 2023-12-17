@@ -10,6 +10,6 @@ namespace djanak.Application.ViewModels
     public class CarouselProductViewModel
     {
         public IList<Carousel> Carousels {  get; set; }
-        public IList<Product> Products { get; set; }
+        public IList<Recept> Products { get; set; }
     }
 }

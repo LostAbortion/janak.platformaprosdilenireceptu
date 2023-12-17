@@ -20,6 +20,6 @@ namespace djanak.Domain.Entities
         [Required]
         public double Price { get; set; }
         public Order Order { get; set; }
-        public Product Product { get; set; }
+        public Recept Product { get; set; }
     }
 }

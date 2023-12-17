@@ -20,12 +20,12 @@ namespace djanak.Application.Implementation
             _eshopDbContext = eshopDbContext;
         }
 
-        public IList<Product> Select()
+        public IList<Recept> Select()
         {
             return _eshopDbContext.Products.ToList();
         }
 
-        public async Task Create(Product product)
+        public async Task Create(Recept product)
         {
             string imageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
             product.ImageSrc = imageSource;
@@ -41,7 +41,7 @@ namespace djanak.Application.Implementation
         {
             bool deleted = false;
 
-            Product? product = _eshopDbContext.Products.FirstOrDefault(product => product.Id == id);
+            Recept? product = _eshopDbContext.Products.FirstOrDefault(product => product.Id == id);
 
             if (product != null)
             {
@@ -54,9 +54,9 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public async Task Edit(Product product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
+        public async Task Edit(Recept product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
-            Product currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
+            Recept currentProduct = _eshopDbContext.Products.FirstOrDefault(p => p.Id == product.Id);
 
             if (currentProduct != null)
             {
@@ -85,7 +85,7 @@ namespace djanak.Application.Implementation
             }
         }
 
-        public Product GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
+        public Recept GetProductById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
                                                //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
         {
             return _eshopDbContext.Products.FirstOrDefault(p => p.Id == id);  

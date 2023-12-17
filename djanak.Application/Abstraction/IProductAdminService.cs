@@ -11,10 +11,10 @@ namespace djanak.Application.Abstraction
 {
     public interface IProductAdminService
     {
-        IList<Product> Select();
-        Task Create(Product product);
+        IList<Recept> Select();
+        Task Create(Recept product);
         bool Delete(int id);
-        Task Edit(Product product);
-        Product GetProductById(int id);
+        Task Edit(Recept product);
+        Recept GetProductById(int id);
     }
 }

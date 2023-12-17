@@ -14,13 +14,13 @@ namespace djanak.Infrastructure.Database
 {
     internal class DatabaseInit
     {
-        public IList<Product> GetProducts()
+        public IList<Recept> GetProducts()
         {
-            IList<Product> products = new List<Product>();
+            IList<Recept> products = new List<Recept>();
 
 
             products.Add(
-                new Product()
+                new Recept()
                 {
                     Id = 1,
                     NazevProductu = "Pražská polévka",
@@ -37,7 +37,7 @@ namespace djanak.Infrastructure.Database
                 });
             
             products.Add(
-                new Product()
+                new Recept()
                 {
                     Id = 2,
                     NazevProductu = "Vařené brambory",
@@ -55,7 +55,7 @@ namespace djanak.Infrastructure.Database
                 });
 
             products.Add(
-                new Product()
+                new Recept()
                 {
                     Id = 3,
                     NazevProductu = "Tuňákové těstoviny",
@@ -76,7 +76,7 @@ namespace djanak.Infrastructure.Database
                 });
 
             products.Add(
-                new Product()
+                new Recept()
                 {
                     Id = 4,
                     NazevProductu = "Kuřecí prsa s broskvemi a švestkami",

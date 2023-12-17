@@ -10,12 +10,10 @@ using djanak.Domain.Validations;
 
 namespace djanak.Domain.Entities
 {
-    public class Product : Entity
+    public class Recept : Entity
     {
         // [Required]
         // [Range(0, double.MaxValue)] -> toto použil u Price (já price nemám)
-
-
 
         [Required]
         [StringLength(100)]

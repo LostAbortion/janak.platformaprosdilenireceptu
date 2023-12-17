@@ -12,7 +12,7 @@ namespace djanak.Infrastructure.Database
 {
     public class DatabaseFake
     {
-        public static List<Product> Products { get; set; }
+        public static List<Recept> Products { get; set; }
         public static List<Carousel> Carousels { get; set; }
         static DatabaseFake()
         {

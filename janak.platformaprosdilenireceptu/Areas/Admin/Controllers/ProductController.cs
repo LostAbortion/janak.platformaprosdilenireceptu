@@ -23,7 +23,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            IList<Product> products = _productService.Select();
+            IList<Recept> products = _productService.Select();
             return View(products);
         }
 
@@ -34,7 +34,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(Recept product)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            Product product = _productService.GetProductById(id);
+            Recept product = _productService.GetProductById(id);
 
             if (product == null) 
             {
@@ -76,7 +76,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Product product)
+        public async Task<IActionResult> Edit(Recept product)
         {
             await _productService.Edit(product);
 
