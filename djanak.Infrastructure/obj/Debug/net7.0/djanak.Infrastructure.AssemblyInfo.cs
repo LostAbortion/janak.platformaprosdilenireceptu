@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("djanak.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fab8eb0ab4a0991a535e627eb3b6558caccfb388")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e87a63c9f082e9d4f4dae264b63f7b71311f8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("djanak.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("djanak.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

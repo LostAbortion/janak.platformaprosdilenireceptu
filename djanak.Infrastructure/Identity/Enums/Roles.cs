@@ -13,3 +13,5 @@ namespace djanak.Infrastructure.Identity.Enums
         Customer
     }
 }
+
+// danjak, danjak - účet který jsem si založil

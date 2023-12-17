@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("djanak.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52dfdf6d2b5ac04305e0b4c066b11205779fe17d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e87a63c9f082e9d4f4dae264b63f7b71311f8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("djanak.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("djanak.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R/+fpPa3TarNmpCVAn3eKSgGIhyU7d446mNoAhGFpJc=",
+  "Hash": "cP52bhOZeEipci2JBuPPu2AowXF/4CHzjHzFlAD3a/A=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -338,6 +338,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery.validation.decimalseparator.js"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\PridaniReceptu_SeznamSurovin.js",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "js/PridaniReceptu_SeznamSurovin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\PridaniReceptu_SeznamSurovin.js"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\site.js",

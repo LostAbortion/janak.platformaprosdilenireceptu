@@ -22,10 +22,10 @@ namespace djanak.Domain.Entities
         
         //public int CategoryId { get; set; }
 
-        public string Obtiznost { get; set; }
-        public string CasovaNarocnost { get; set; }
+        public string? Obtiznost { get; set; }
+        public string? CasovaNarocnost { get; set; }
         public string? PopisReceptu {  get; set; }
-        public string SeznamSurovin { get; set; }
+        public string? SeznamSurovin { get; set; }
         public string PostupPripravy { get; set; }
         public DateTime DatumVytvoreni { get; set; }
         //[Required] // -> zde ten required bude znamenat že MUSÍM povinně přidat obrázek k mému receptu (asi teda)

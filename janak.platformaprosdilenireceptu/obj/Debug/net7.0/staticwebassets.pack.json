@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\img\\products\\tiger-jpg.jpg"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\PridaniReceptu_SeznamSurovin.js",
+      "PackagePath": "staticwebassets\\js\\PridaniReceptu_SeznamSurovin.js"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",
       "PackagePath": "staticwebassets\\js\\dialogs.js"
     },
