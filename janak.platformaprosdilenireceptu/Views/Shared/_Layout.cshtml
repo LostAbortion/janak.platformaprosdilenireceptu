@@ -17,7 +17,13 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">janak.platformaprosdilenireceptu</a>
+                <!--<i class="bi bi-egg"></i>
+                <span style="margin-right: 8px;"></span>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Janda Recepts</a>  -->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="display: inline-block;">
+                    <i class="bi bi-egg"></i>
+                    Janda Recepts
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,14 +36,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated == true && (User.IsInRole(nameof(Roles.Admin)) || User.IsInRole(nameof(Roles.Manager))))  //změna s Identity
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
+                        </li>
+                        <!-- Zde jsem zakomentoval tento if. Potřebuji totiž zobrazovat Products pro všechny a ne jenom přihlášenýho admina. Navíc v tuto 
+                             chvíly se nemůžu přihlásit.
+                        -->
+                        <!-- (zavinac)if manifest="" (User.Identity.IsAuthenticated == true && (User.IsInRole(nameof(Roles.Admin)) || User.IsInRole(nameof(Roles.Manager)))) //změna s Identity
                             //tento řádek určuje že Products se zobrazí pouze pokud je user zautentikován, toto ale změním aby to tady nebylo, protože to uvidí vždy
                             //tuto logiku si ale chci nechat, protože mi to bude sloužit na edit a mazání produktů pro Adminy a Manažery
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
-                            </li>
-                        }
+                        } -->
                     </ul>
                 </div>
                 @{  //přídavek s Identity

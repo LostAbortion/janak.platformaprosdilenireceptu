@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Areas\Admin\Security\Views\Account\_ViewImports.cshtml" />
-    <Content Remove="Areas\Admin\Security\Views\Account\_ViewStart.cshtml" />
+    <Content Remove="Areas\Security\Views\Account\_ViewImports.cshtml" />
+    <Content Remove="Areas\Security\Views\Account\_ViewStart.cshtml" />
   </ItemGroup>
 
 	<ItemGroup>

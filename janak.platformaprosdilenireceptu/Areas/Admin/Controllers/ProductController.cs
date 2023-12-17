@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]
+    //[Authorize(Roles = nameof(Roles.Admin) + ", " + nameof(Roles.Manager))]  //tento řádek jsem zakomentoval. Blokoval mě od rozkliknutí Products
     public class ProductController : Controller
     {
         IProductAdminService _productService;
