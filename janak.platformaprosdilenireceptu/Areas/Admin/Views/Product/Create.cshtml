@@ -52,14 +52,15 @@
     <div class="mb-3"> <!-- SEZNAM SUROVIN -->
         <label class="form-label">Seznam Surovin</label>
         <input type="hidden" id="jsonSeznamSurovin" class="form-control" asp-for="SeznamSurovin" value="">
-        <div>
-            <input type="text" id="nazev" placeholder="Název suroviny....">
-            <input type="text" id="mnozstvi" placeholder="Množství suroviny....">
+        <div style="margin-bottom: 10px;">
+            <input type="text" id="nazev" placeholder="Název suroviny...."/>  
+            <input type="text" id="mnozstvi" placeholder="Množství suroviny...."/>
         </div>
         <button class="btn btn-secondary" onclick="pridatSurovinu()">Přidat surovinu</button>
+        <div id="errorSurovina" style="color: red; display: none;">Prosím zadejte název suroviny!</div>
         <div id="seznamSurovin"></div>
     </div>
-    <div class="mb-3">
+    <div class="mb-3">  <!-- POSTUP PŘÍPRAVY -->
         <label class="form-label">Postup</label>
         <input class="form-control" asp-for="PostupPripravy">
     </div>

@@ -6,25 +6,37 @@ function pridatSurovinu() {
     const nazev = document.getElementById('nazev').value;
     const mnozstvi = document.getElementById('mnozstvi').value;
 
-    // Vytvoøení objektu pro surovinu
-    const novaSurovina = {
-        Nazev: nazev,
-        Mnozstvi: mnozstvi
-    };
+    if (nazev === '') {
+        //zobrazování error message pro uživatele
+        document.getElementById('errorSurovina').style.display = 'block';
+    }
 
-    // Pøidání suroviny do seznamu
-    seznamSurovin.push(novaSurovina);
 
-    // Vymazání obsahu textových polí
-    document.getElementById('nazev').value = '';
-    document.getElementById('mnozstvi').value = '';
+    else {
+        //schování error message pro uživatele
+        document.getElementById('errorSurovina').style.display = 'none';
 
-    // Aktualizace skrytého pole s JSON seznamem surovin
-    const jsonSeznamSurovin = JSON.stringify(seznamSurovin);
-    document.getElementById('jsonSeznamSurovin').value = jsonSeznamSurovin;
+        // Vytvoøení objektu pro surovinu
+        const novaSurovina = {
+            Nazev: nazev,
+            Mnozstvi: mnozstvi
+        };
 
-    // Zobrazení seznamu surovin v divu pod tlaèítkem
-    zobrazitSeznamSurovin();
+        // Pøidání suroviny do seznamu
+        seznamSurovin.push(novaSurovina);
+
+        // Vymazání obsahu textových polí
+        document.getElementById('nazev').value = '';
+        document.getElementById('mnozstvi').value = '';
+
+        // Aktualizace skrytého pole s JSON seznamem surovin
+        const jsonSeznamSurovin = JSON.stringify(seznamSurovin);
+        document.getElementById('jsonSeznamSurovin').value = jsonSeznamSurovin;
+
+        // Zobrazení seznamu surovin v divu pod tlaèítkem
+        zobrazitSeznamSurovin();
+    }
+
 }
 
 function zobrazitSeznamSurovin() {
