@@ -25,14 +25,14 @@ namespace djanak.Application.Implementation
             return _eshopDbContext.Recepts.ToList();
         }
 
-        public async Task Create(Recept product)
+        public async Task Create(Recept recept)
         {
-            string imageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
-            product.ImageSrc = imageSource;
+            string imageSource = await _fileUploadService.FileUploadAsync(recept.Image, Path.Combine("img", "products"));
+            recept.ImageSrc = imageSource;
 
             if (_eshopDbContext.Recepts != null)
             {
-                _eshopDbContext.Recepts.Add(product);
+                _eshopDbContext.Recepts.Add(recept);
                 _eshopDbContext.SaveChanges();
             }
         }
@@ -70,7 +70,6 @@ namespace djanak.Application.Implementation
                 currentProduct.PostupPripravy = product.PostupPripravy;
                 currentProduct.DatumVytvoreni = product.DatumVytvoreni;
                 currentProduct.ImageSrc = product.ImageSrc;
-                currentProduct.ImageAlt = product.ImageAlt;
 
 
                 _eshopDbContext.SaveChanges();

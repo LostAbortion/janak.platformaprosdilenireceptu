@@ -1,0 +1,62 @@
+﻿@model Recept
+
+@{
+	ViewData["Title"] = "Editace receptu";  //TOTO JE VIEW NA EDIT
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">   <!-- ROZDÍL JE ZDE V EDIT ACTION-->
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Nazev Receptu</label>
+        <input class="form-control" asp-for="NazevProductu" />
+        <span asp-validation-for="NazevProductu" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Kategorie</label>
+        <input class="form-control" asp-for="Kategorie">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Obtiznost</label>
+        <input class="form-control" asp-for="Obtiznost">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CasovaNarocnost</label>
+        <input class="form-control" asp-for="CasovaNarocnost">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Popis</label>
+        <input class="form-control" asp-for="PopisReceptu">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Seznam Surovin</label>
+        <input class="form-control" asp-for="SeznamSurovin">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Postup</label>
+        <input class="form-control" asp-for="PostupPripravy">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Datum Vytvoreni</label>
+        <input class="form-control" asp-for="DatumVytvoreni">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Odkaz obrázku</label>
+        <input class="form-control" asp-for="ImageSrc">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Do editu jsem přidal FileUpload -->
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Uložit změny</button>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/validations/FileContentValidation.js"></script>
+}

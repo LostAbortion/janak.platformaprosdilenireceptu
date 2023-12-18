@@ -74,7 +74,6 @@ namespace djanak.Application.Implementation
                 currentProduct.PostupPripravy = recept.PostupPripravy;
                 currentProduct.DatumVytvoreni = recept.DatumVytvoreni;
                 currentProduct.ImageSrc = recept.ImageSrc;
-                currentProduct.ImageAlt = recept.ImageAlt;
             }
         }
 

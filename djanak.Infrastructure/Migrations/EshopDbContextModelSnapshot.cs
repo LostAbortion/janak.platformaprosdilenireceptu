@@ -242,15 +242,10 @@ namespace djanak.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CasovaNarocnost")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("DatumVytvoreni")
                         .HasColumnType("datetime(6)");
-
-                    b.Property<string>("ImageAlt")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<string>("ImageSrc")
                         .HasColumnType("longtext");
@@ -265,7 +260,6 @@ namespace djanak.Infrastructure.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("Obtiznost")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("PopisReceptu")
@@ -276,7 +270,6 @@ namespace djanak.Infrastructure.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("SeznamSurovin")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -289,7 +282,6 @@ namespace djanak.Infrastructure.Migrations
                             Id = 1,
                             CasovaNarocnost = "30 minut",
                             DatumVytvoreni = new DateTime(2023, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageAlt = "Obrazek1",
                             ImageSrc = "/img/products/recept_01.jpg",
                             Kategorie = "Oběd",
                             NazevProductu = "Pražská polévka",
@@ -303,7 +295,6 @@ namespace djanak.Infrastructure.Migrations
                             Id = 2,
                             CasovaNarocnost = "40 minut",
                             DatumVytvoreni = new DateTime(2020, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageAlt = "Obrazek2",
                             ImageSrc = "/img/products/recept_02.jpg",
                             Kategorie = "Přílohy",
                             NazevProductu = "Vařené brambory",
@@ -317,7 +308,6 @@ namespace djanak.Infrastructure.Migrations
                             Id = 3,
                             CasovaNarocnost = "20 minut",
                             DatumVytvoreni = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageAlt = "Obrazek3",
                             ImageSrc = "/img/products/recept_03.jpg",
                             Kategorie = "Oběd",
                             NazevProductu = "Tuňákové těstoviny",
@@ -331,7 +321,6 @@ namespace djanak.Infrastructure.Migrations
                             Id = 4,
                             CasovaNarocnost = "40 minut",
                             DatumVytvoreni = new DateTime(2023, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageAlt = "Obrazek4",
                             ImageSrc = "/img/products/recept_04.jpg",
                             Kategorie = "Oběd",
                             NazevProductu = "Kuřecí prsa s broskvemi a švestkami",

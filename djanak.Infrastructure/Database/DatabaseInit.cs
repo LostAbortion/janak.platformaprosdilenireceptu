@@ -33,7 +33,6 @@ namespace djanak.Infrastructure.Database
                     "Přidáme mrkev, orestujeme a poté zasypeme červenou paprikou. Vše zalijeme vývarem, přidáme oloupané, nakrájené brambory, osolíme a polévku vaříme 15 minut.",
                     DatumVytvoreni = new DateTime(2023, 10, 31),
                     ImageSrc = "/img/products/recept_01.jpg",
-                    ImageAlt = "Obrazek1"
                 });
             
             recepts.Add(
@@ -51,7 +50,6 @@ namespace djanak.Infrastructure.Database
                     "Vaříme 15 minut do změknutí. Zda jsou brambory hotové, poznáme tak, že se po píchnutí vidličkou rozpadnou.",
                     DatumVytvoreni = new DateTime(2020, 10, 31),
                     ImageSrc = "/img/products/recept_02.jpg",
-                    ImageAlt = "Obrazek2"
                 });
 
             recepts.Add(
@@ -72,7 +70,6 @@ namespace djanak.Infrastructure.Database
                     "Do hotové směsi vmíchejte těstoviny a můžete servírovat. V případě zájmu je možné těstoviny posypat strouhaným parmazánem, není to však třeba.",
                     DatumVytvoreni = new DateTime(2023, 1, 1),
                     ImageSrc = "/img/products/recept_03.jpg",
-                    ImageAlt = "Obrazek3"
                 });
 
             recepts.Add(
@@ -88,7 +85,6 @@ namespace djanak.Infrastructure.Database
                     PostupPripravy = "Prvně nasekat, pak povařit, pak promíchat. Tenhle recept je hrozně dlouhej, tak jsem ho sem nevkládal celej.",
                     DatumVytvoreni = new DateTime(2023, 10, 31),
                     ImageSrc = "/img/products/recept_04.jpg",
-                    ImageAlt = "Obrazek4"
                 });
             
             return recepts;

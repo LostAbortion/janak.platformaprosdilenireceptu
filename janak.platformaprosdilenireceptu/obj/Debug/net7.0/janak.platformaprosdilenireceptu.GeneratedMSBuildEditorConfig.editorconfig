@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\danie\source\repos\janak.platformaprosdilenireceptu\janak.platformaprosdilenireceptu
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Product/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
+[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Recept/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjZXB0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Product/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
+[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Recept/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjZXB0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Product/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+[C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/Recept/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjZXB0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/danie/source/repos/janak.platformaprosdilenireceptu/janak.platformaprosdilenireceptu/Areas/Admin/Views/_ViewImports.cshtml]

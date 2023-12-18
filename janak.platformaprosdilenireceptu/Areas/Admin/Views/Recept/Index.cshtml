@@ -1,0 +1,83 @@
+﻿@model IList<Recept>
+
+@{
+	ViewData["Title"] = "Seznam receptů";  //TOTO JE VIEW NA "PRODUCTS"
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<a asp-action="Create" class="btn btn-primary mb-3">Přidat recept</a>
+
+@{
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="@product.ImageSrc" alt="Product Image" />
+                    <!-- Product details-->
+                    <div class="card-body">
+                        <h5 class="card-title">@product.NazevProductu</h5>
+                        <p class="card-text">@product.PopisReceptu</p>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer">
+                        <!-- <a class="btn btn-outline-dark" href="#">Add to cart</a> -->
+                        <a asp-action="Edit" class="btn btn-primary mb-1" style="width: 40%" asp-route-Id="@product.Id">Edit</a>
+                        <a asp-action="Delete" class="btn btn-danger mb-1" style="width: 40%" asp-route-Id="@product.Id" onclick="return ConfirmDelete();">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@section Scripts
+    {
+    <script src="~/js/dialogs.js"></script>
+}
+
+@* 
+ if (Model != null && Model.Count > 0)
+     {
+ <table class="table">
+     <thead>
+         <tr>
+             <th scope="col">@nameof(Product.Id)</th>
+             <th scope="col">@nameof(Product.NazevProductu)</th>
+             <th scope="col">@nameof(Product.Kategorie)</th>
+             <th scope="col">@nameof(Product.Obtiznost)</th>
+             <th scope="col">@nameof(Product.CasovaNarocnost)</th>
+             <th scope="col">@nameof(Product.PopisReceptu)</th>
+             <th scope="col">@nameof(Product.SeznamSurovin)</th>
+             <th scope="col">@nameof(Product.PostupPripravy)</th>
+             <th scope="col">@nameof(Product.DatumVytvoreni)</th>
+             <th scope="col">@nameof(Product.ImageSrc)</th>
+             <th scope="col">@nameof(Product.ImageAlt)</th>
+             <th scope="col">Edit</th>
+             <th scope="col">Delete</th>
+         </tr>
+     </thead>
+     <tbody>
+         @for (int i = 0; i < Model.Count; ++i)
+         {
+             <tr>
+                 <th scope="row">@Model[i].Id</th>
+                 <td>@Model[i].NazevProductu</td>
+                 <td>@Model[i].Kategorie</td>
+                 <td>@Model[i].Obtiznost</td>
+                 <td>@Model[i].CasovaNarocnost</td>
+                 <td>@Model[i].PopisReceptu</td>
+                 <td>@Model[i].SeznamSurovin</td>
+                 <td>@Model[i].PostupPripravy</td>
+                 <td>@Model[i].DatumVytvoreni</td>
+                 <td>@Model[i].ImageSrc</td>
+                 <td>@Model[i].ImageAlt</td>
+                 <td><a asp-action="Edit" asp-route-Id="@Model[i].Id">Edit</a></td>
+                 <td><a asp-action="Delete" asp-route-Id="@Model[i].Id" onclick="return ConfirmDelete();">Delete</a></td>
+             </tr>
+         }
+     </tbody>
+ </table>
+     } *@

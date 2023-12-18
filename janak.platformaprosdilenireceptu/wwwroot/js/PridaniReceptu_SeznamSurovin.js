@@ -79,3 +79,80 @@ function zobrazitSeznamSurovin() {
     table.appendChild(tbody);
     seznamDiv.appendChild(table);
 }
+
+
+let kroky = {}; // Objekt pro ukládání krokù
+
+document.addEventListener('DOMContentLoaded', function() {
+    pridatPrvniKrok();
+});
+
+function pridatPrvniKrok() {
+    const krokKey = '1'; // Klíè pro první krok
+
+    // Vytvoøení první textarea
+    const firstTextArea = document.createElement('textarea');
+    firstTextArea.classList.add('form-control');
+    firstTextArea.style.height = '80px'; // Nastavení výšky textového pole
+    firstTextArea.style.marginBottom = '10px'; // Pøidání mezery pod textovým polem
+    firstTextArea.setAttribute('placeholder', krokKey + '.krok');
+    firstTextArea.setAttribute('id', krokKey); // Pøidání id odpovídajícímu klíèi kroku
+
+    // Pøidání první textarea do DOM
+    document.getElementById('steps').appendChild(firstTextArea);
+
+    // Uložení prvního kroku do objektu kroky
+    kroky[krokKey] = ''; // Prázdný text pro první krok
+}
+
+function pridatKrok() {
+    const krokCount = Object.keys(kroky).length + 1; // Poèítadlo krokù
+    const krokKey = `${krokCount}`; // Vytvoøení klíèe pro nový krok
+
+    // Vytvoøení nové textarea
+    const newTextArea = document.createElement('textarea');
+    newTextArea.classList.add('form-control');
+    newTextArea.style.height = '80px'; // Nastavení výšky textového pole
+    newTextArea.style.marginBottom = '10px'; // Pøidání mezery pod textovým polem
+    newTextArea.setAttribute('placeholder', krokKey + '.krok');
+    newTextArea.setAttribute('id', krokKey); // Pøidání id odpovídajícímu klíèi kroku
+
+    // Pøidání nové textarea do DOM
+    document.getElementById('steps').appendChild(newTextArea);
+
+    // Uložení kroku do objektu kroky
+    kroky[krokKey] = ''; // Prázdný text pro nový krok
+}
+
+
+function submitForm() {
+
+    let highestId = 1;
+    let currentDiv;
+
+    while (currentDiv = document.getElementById(`${highestId}`)) {
+        // Zde mùžeš provádìt operace s nalezeným divem, napø. pøidání <p> prvku, atd.
+
+        highestId++; // Inkrementuj ID pro hledání dalšího divu
+    }
+
+    for (let i = 1; i < highestId; i++) {
+        const textAreaId = `${i}`;
+        const textAreaElement = document.getElementById(textAreaId);
+
+        //if (textAreaElement) { //&& textAreaElement.tagName.toLowerCase() === 'input' && textAreaElement.type === 'text'
+            // Pokud existuje textové pole s daným ID, pøiøaï jeho hodnotu do objektu 'kroky' pod odpovídajícím klíèem
+        kroky[textAreaId] = textAreaElement.value;
+        //}
+
+
+        // tato funkce bohužel neukládá hodnoty k pøiøazeným klíèùm
+        // musím opravit
+    }
+
+    // Serializace krokù do JSON
+    const jsonKroky = JSON.stringify(kroky);
+    document.getElementById('jsonKroky').value = jsonKroky;
+    
+    return true;
+}
