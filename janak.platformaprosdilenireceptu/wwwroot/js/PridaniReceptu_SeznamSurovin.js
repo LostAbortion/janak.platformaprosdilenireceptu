@@ -50,11 +50,11 @@ function zobrazitSeznamSurovin() {
     const headerRow = document.createElement('tr');
 
     const headerNazev = document.createElement('th');
-    headerNazev.textContent = 'Název suroviny';
+    headerNazev.textContent = 'Nazev suroviny';
     headerRow.appendChild(headerNazev);
 
     const headerMnozstvi = document.createElement('th');
-    headerMnozstvi.textContent = 'Množství';
+    headerMnozstvi.textContent = 'Mnozstvi';
     headerRow.appendChild(headerMnozstvi);
 
     thead.appendChild(headerRow);
@@ -80,6 +80,17 @@ function zobrazitSeznamSurovin() {
     seznamDiv.appendChild(table);
 }
 
+
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
 
 let kroky = {}; // Objekt pro ukládání krokù
 
@@ -125,6 +136,17 @@ function pridatKrok() {
 }
 
 
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+
 function submitForm() {
 
     let highestId = 1;
@@ -144,15 +166,48 @@ function submitForm() {
             // Pokud existuje textové pole s daným ID, pøiøaï jeho hodnotu do objektu 'kroky' pod odpovídajícím klíèem
         kroky[textAreaId] = textAreaElement.value;
         //}
-
-
-        // tato funkce bohužel neukládá hodnoty k pøiøazeným klíèùm
-        // musím opravit
     }
 
     // Serializace krokù do JSON
     const jsonKroky = JSON.stringify(kroky);
     document.getElementById('jsonKroky').value = jsonKroky;
-    
+
     return true;
 }
+
+
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+
+
+document.getElementById('CreateFormular').addEventListener('submit', function (event) {
+
+    const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'ControlErrorMessage3', 'ControlErrorMessage4'];
+    const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
+    let isValid = true;
+
+    for (let i = 0; i < inputs.length; i++) {
+        let inputValue = document.getElementById(inputs[i]).value;
+        let errorMessage = document.getElementById(errorMessages[i]);
+
+        if (inputValue === '') {
+            errorMessage.style.display = 'inline-block'; // Zobrazit chybu
+            isValid = false;
+        }
+        else {
+            errorMessage.style.display = 'none'; // Skrýt chybu
+        }
+    }
+
+    if (isValid == false) {
+        event.preventDefault(); // Prevent the form from submitting
+    }
+});

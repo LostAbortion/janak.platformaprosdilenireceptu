@@ -5,23 +5,25 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Create" onsubmit="submitForm()" method="post" enctype="multipart/form-data">  <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
+<form asp-action="Create" id="CreateFormular" onsubmit="submitForm()" method="post" enctype="multipart/form-data">
+    <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
                                         <!-- enctype je tady kvůli tomu abychom mohli posílat i jiný typ dat než jen text (kvůli uploadu souboru)-->
-    <div asp-validation-summary="All" class="text-danger"></div>
+    <!-- <div asp-validation-summary="All" class="text-danger"></div>  -->
 
 
 	<div class="mb-3">  <!-- NÁZEV RECEPTU -->
-		<label class="form-label">Název Receptu</label>
-		<input class="form-control" asp-for="NazevProductu" />
-        <span asp-validation-for="NazevProductu" class="text-danger"></span>
+        <label class="form-label">Název Receptu <span style="color: red;">*</span></label>
+        <span id="ErrorMessage1" style="display: none;" asp-validation-for="NazevProductu" class="text-danger">Prosím vyplňte název receptu</span>
+		<input id="ControlErrorMessage1" class="form-control" asp-for="NazevProductu" />
 	</div>
     <div class="mb-3"> <!-- POPIS -->
         <label class="form-label">Popis</label>
         <textarea class="form-control" style="height: 100px;" placeholder="Zde můžete napsat popis svého receptu...." asp-for="PopisReceptu"></textarea>
     </div>
     <div class="mb-3"> <!-- KATEGORIE -->
-        <label class="form-label">Kategorie</label>
-        <select class="form-select" asp-for="Kategorie">
+        <label class="form-label">Kategorie <span style="color: red;">*</span></label>
+        <span id="ErrorMessage2" style="display: none;" asp-validation-for="Kategorie" class="text-danger">Prosím vyberte kategorii</span>
+        <select id="ControlErrorMessage2" class="form-select" asp-for="Kategorie">
             <option value="">Zvolte kategorii....</option>
             <option value="Snídaně">Snídaně</option>
             <option value="Oběd">Oběd</option>
@@ -56,29 +58,26 @@
             <input type="text" id="nazev" placeholder="Název suroviny...."/>  
             <input type="text" id="mnozstvi" placeholder="Množství suroviny...."/>
         </div>
-        <button class="btn btn-secondary" onclick="pridatSurovinu()">Přidat surovinu</button>
+        <button type="button" class="btn btn-secondary" onclick="pridatSurovinu()">Přidat surovinu</button>
         <div id="errorSurovina" style="color: red; display: none;">Prosím zadejte název suroviny!</div>
         <div id="seznamSurovin"></div>
     </div>
     <div class="mb-3"> <!-- POSTUP PŘÍPRAVY -->
-        <label class="form-label">Postup Přípravy</label>
-        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" />
+        <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
+        <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
+        <input id="ControlErrorMessage3" type="hidden" id="jsonKroky" asp-for="PostupPripravy" />
         <div id="steps">
             <!-- Sem se budou přidávat kroky -->
         </div>
-        <button class="btn btn-secondary" onclick="pridatKrok()">Přidat další krok</button>
+        <button type="button" class="btn btn-secondary" onclick="pridatKrok()">Přidat další krok</button>
     </div>
     <div class="mb-3"> <!-- VLOŽENÍ OBRÁZKU -->
-        <label class="form-label">Vyberte obrázek</label>
-        <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
-        <span asp-validation-for="Image" class="text-danger"></span>  <!-- Error message, pokud uživatel nevloží obrázek -->
+        <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
+        <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
+        </br>
+        <input id="ControlErrorMessage4" id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
     </div>
     <button type="submit" class="btn btn-primary">Přidat</button>
-    <!--  //zakomentoval jsem tento div, protože do databáze budu přidávat datum a čas přímo v controlleru v metodě create
-    <div class="mb-3">
-        <label class="form-label">Datum Vytvoreni</label>
-        <input class="form-control" asp-for="DatumVytvoreni">
-    </div>  -->
 </form>
 
 @section Scripts
