@@ -148,29 +148,43 @@ function pridatKrok() {
 ////
 
 function submitForm() {
+    console.log('submitForm se zavolal');
 
     let highestId = 1;
     let currentDiv;
 
     while (currentDiv = document.getElementById(`${highestId}`)) {
-        // Zde mùžeš provádìt operace s nalezeným divem, napø. pøidání <p> prvku, atd.
+        // Zde zjistím kolik divù existuje
 
         highestId++; // Inkrementuj ID pro hledání dalšího divu
     }
 
-    for (let i = 1; i < highestId; i++) {
+    
+    for (let i = 1; i < highestId; i++) {  //lze do kroky pøidám klíè a value
         const textAreaId = `${i}`;
         const textAreaElement = document.getElementById(textAreaId);
+        // getElementById(textAreaId);
 
-        //if (textAreaElement) { //&& textAreaElement.tagName.toLowerCase() === 'input' && textAreaElement.type === 'text'
-            // Pokud existuje textové pole s daným ID, pøiøaï jeho hodnotu do objektu 'kroky' pod odpovídajícím klíèem
         kroky[textAreaId] = textAreaElement.value;
-        //}
     }
+
 
     // Serializace krokù do JSON
     const jsonKroky = JSON.stringify(kroky);
-    document.getElementById('jsonKroky').value = jsonKroky;
+    console.log('k nicemu ' + jsonKroky);
+    const jsonKrokyElement = document.getElementById('jsonKroky');
+
+    if (jsonKroky !== null && jsonKrokyElement) {
+        jsonKrokyElement.value = jsonKroky;
+        console.log(jsonKrokyElement);
+        console.log(jsonKrokyElement.value);
+    }
+    /*
+    if (jsonKroky !== null) {
+        document.getElementById('jsonKroky').value = jsonKroky;
+    }*/
+
+    console.log('submitForm skonèil');
 
     return true;
 }
@@ -190,9 +204,11 @@ function submitForm() {
 
 document.getElementById('CreateFormular').addEventListener('submit', function (event) {
 
+    let temp = submitForm();
+
     const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'ControlErrorMessage3', 'ControlErrorMessage4'];
     const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
-    let isValid = true;
+    //let isValid = true;
 
     for (let i = 0; i < inputs.length; i++) {
         let inputValue = document.getElementById(inputs[i]).value;
@@ -211,3 +227,31 @@ document.getElementById('CreateFormular').addEventListener('submit', function (e
         event.preventDefault(); // Prevent the form from submitting
     }
 });
+
+/*
+document.getElementById('CreateFormular').addEventListener('submit', function (event) {
+
+    let isValid = submitForm();
+
+    const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'ControlErrorMessage3', 'ControlErrorMessage4'];
+    const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
+    //let isValid = true;
+
+    for (let i = 0; i < inputs.length; i++) {
+        let inputValue = document.getElementById(inputs[i]).value;
+        let errorMessage = document.getElementById(errorMessages[i]);
+
+        if (inputValue === '') {
+            errorMessage.style.display = 'inline-block'; // Zobrazit chybu
+            isValid = false;
+        }
+        else {
+            errorMessage.style.display = 'none'; // Skrýt chybu
+        }
+    }
+
+    if (isValid == false) {
+        event.preventDefault(); // Prevent the form from submitting
+    }
+});
+*/

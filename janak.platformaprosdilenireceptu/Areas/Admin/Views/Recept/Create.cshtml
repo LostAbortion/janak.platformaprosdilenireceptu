@@ -5,7 +5,8 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Create" id="CreateFormular" onsubmit="submitForm()" method="post" enctype="multipart/form-data">
+<!-- onsubmit="submitForm()" -->
+<form asp-action="Create" id="CreateFormular" method="post" enctype="multipart/form-data">
     <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
                                         <!-- enctype je tady kvůli tomu abychom mohli posílat i jiný typ dat než jen text (kvůli uploadu souboru)-->
     <!-- <div asp-validation-summary="All" class="text-danger"></div>  -->
@@ -65,7 +66,7 @@
     <div class="mb-3"> <!-- POSTUP PŘÍPRAVY -->
         <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
         <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
-        <input id="ControlErrorMessage3" type="hidden" id="jsonKroky" asp-for="PostupPripravy" />
+        <input id="ControlErrorMessage3" type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
         <div id="steps">
             <!-- Sem se budou přidávat kroky -->
         </div>
@@ -87,3 +88,38 @@
     <script src="~/js/PridaniReceptu_SeznamSurovin.js"></script>
 
 }
+
+<!--
+function submitForm() {
+
+    let highestId = 1;
+    let currentDiv;
+
+    while (currentDiv = document.getElementById(`${highestId}`)) {
+        // Zde zjistím kolik divů existuje
+
+        highestId++; // Inkrementuj ID pro hledání dalšího divu
+    }
+
+    for (let i = 1; i < highestId; i++) {  //lze do kroky přidám klíč a value
+        const textAreaId = `${i}`;
+        const textAreaElement = document.getElementById(textAreaId);
+
+        kroky[textAreaId] = textAreaElement.value;
+    }
+
+    // Serializace kroků do JSON
+    const jsonKroky = JSON.stringify(kroky);
+    document.getElementById('jsonKroky').value = jsonKroky;
+
+    return true;
+} -->
+
+<!--
+<div id="steps">
+    <!-- Sem se budou přidávat kroky 
+    <textarea class="form-control valid" placeholder="1.krok" id="1" style="height: 80px; margin-bottom: 10px;" aria-invalid="false">
+    </textarea>
+    <textarea class="form-control valid" placeholder="2.krok" id="2" style="height: 80px; margin-bottom: 10px;" aria-invalid="false">
+    </textarea>
+</div> -->
