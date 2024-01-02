@@ -66,7 +66,11 @@
     <div class="mb-3"> <!-- POSTUP PŘÍPRAVY -->
         <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
         <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
-        <input id="ControlErrorMessage3" type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
+        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
+        <!-- Odstranil jsem zde id controlmessage3 protože to bylo druhé id na tomto prvku
+            místo toho používám jsonKroky v mém .js souboru
+        -->
+        <!-- Zde jsou 2 id !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <div id="steps">
             <!-- Sem se budou přidávat kroky -->
         </div>
@@ -76,7 +80,10 @@
         <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
         <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
         </br>
-        <input id="ControlErrorMessage4" id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
+        <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
+        <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
+            místo toho používám fileupload v mém .js souboru
+        -->
     </div>
     <button type="submit" class="btn btn-primary">Přidat</button>
 </form>

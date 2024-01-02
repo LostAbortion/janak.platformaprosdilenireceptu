@@ -11,7 +11,6 @@ function pridatSurovinu() {
         document.getElementById('errorSurovina').style.display = 'block';
     }
 
-
     else {
         //schování error message pro uživatele
         document.getElementById('errorSurovina').style.display = 'none';
@@ -36,7 +35,6 @@ function pridatSurovinu() {
         // Zobrazení seznamu surovin v divu pod tlaèítkem
         zobrazitSeznamSurovin();
     }
-
 }
 
 function zobrazitSeznamSurovin() {
@@ -206,12 +204,19 @@ document.getElementById('CreateFormular').addEventListener('submit', function (e
 
     let temp = submitForm();
 
-    const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'ControlErrorMessage3', 'ControlErrorMessage4'];
+    const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'jsonKroky', 'fileupload'];  // poslední fileupload a je zde
+    //protože mi colidujou id v souboru create.cshtml
     const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
-    //let isValid = true;
+    let isValid = true;
 
     for (let i = 0; i < inputs.length; i++) {
-        let inputValue = document.getElementById(inputs[i]).value;
+
+        if (document.getElementById(inputs[i]).value === null) {
+            isValid = false;
+        }
+        else {
+            let inputValue = document.getElementById(inputs[i]).value;
+        }
         let errorMessage = document.getElementById(errorMessages[i]);
 
         if (inputValue === '') {
