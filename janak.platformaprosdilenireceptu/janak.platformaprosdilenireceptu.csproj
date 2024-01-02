@@ -10,12 +10,12 @@
     <Content Remove="Areas\Security\Views\Account\_ViewImports.cshtml" />
     <Content Remove="Areas\Security\Views\Account\_ViewStart.cshtml" />
     <Content Remove="wwwroot\js\jquery.validation.decimalseparator.js" />
-    <Content Remove="wwwroot\js\PridaniReceptu_SeznamSurovin.js" />
+    <Content Remove="wwwroot\js\PridaniReceptu_Create.js" />
     <Content Remove="wwwroot\js\site.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <ApplicationDefinition Include="wwwroot\js\PridaniReceptu_SeznamSurovin.js" />
+    <ApplicationDefinition Include="wwwroot\js\PridaniReceptu_Create.js" />
   </ItemGroup>
 
 	<ItemGroup>
