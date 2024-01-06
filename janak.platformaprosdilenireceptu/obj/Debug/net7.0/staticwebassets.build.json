@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I1HSKEV75t8xLTRGu7u4rPWz2iYglMzYJIK4snsGH1Y=",
+  "Hash": "gYds65FPzNyl7nwSalD5uCj91O1cP7lcYJJJvRZ3Vnk=",
   "Source": "janak.platformaprosdilenireceptu",
   "BasePath": "_content/janak.platformaprosdilenireceptu",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\carousel\\carousel_03.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\header.jpg",
+      "SourceId": "janak.platformaprosdilenireceptu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\",
+      "BasePath": "_content/janak.platformaprosdilenireceptu",
+      "RelativePath": "img/products/header.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\products\\header.jpg"
     },
     {
       "Identity": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\ratatoile.jpg",

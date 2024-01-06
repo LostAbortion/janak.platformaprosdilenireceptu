@@ -5,12 +5,9 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<!-- onsubmit="submitForm()" -->
 <form asp-action="Create" id="CreateFormular" method="post" enctype="multipart/form-data">
     <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
                                         <!-- enctype je tady kvůli tomu abychom mohli posílat i jiný typ dat než jen text (kvůli uploadu souboru)-->
-    <!-- <div asp-validation-summary="All" class="text-danger"></div>  -->
-
 
 	<div class="mb-3">  <!-- NÁZEV RECEPTU -->
         <label class="form-label">Název Receptu <span style="color: red;">*</span></label>
@@ -66,10 +63,9 @@
     <div class="mb-3"> <!-- POSTUP PŘÍPRAVY -->
         <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
         <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
-        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
+        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value=""/>
         <!-- Odstranil jsem zde id controlmessage3 protože to bylo druhé id na tomto prvku
-            místo toho používám jsonKroky v mém .js souboru
-        -->
+            místo toho používám jsonKroky v mém .js souboru -->
         <div id="steps">
             <!-- Sem se budou přidávat kroky -->
         </div>
@@ -81,8 +77,7 @@
         <br>
         <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
         <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
-            místo toho používám fileupload v mém .js souboru
-        -->
+            místo toho používám fileupload v mém .js souboru -->
     </div>
     <button type="submit" class="btn btn-primary">Přidat</button>
 </form>
@@ -92,7 +87,6 @@
     <partial name="_ValidationScriptsPartial" />
     <script src="~/js/validations/FileContentValidation.js"></script>
     <script src="~/js/PridaniReceptu_Create.js"></script>
-
 }
 
 <!--
@@ -120,12 +114,3 @@ function submitForm() {
 
     return true;
 } -->
-
-<!--
-<div id="steps">
-    <!-- Sem se budou přidávat kroky 
-    <textarea class="form-control valid" placeholder="1.krok" id="1" style="height: 80px; margin-bottom: 10px;" aria-invalid="false">
-    </textarea>
-    <textarea class="form-control valid" placeholder="2.krok" id="2" style="height: 80px; margin-bottom: 10px;" aria-invalid="false">
-    </textarea>
-</div> -->
