@@ -5,58 +5,110 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Edit" method="post" enctype="multipart/form-data">   <!-- ROZDÍL JE ZDE V EDIT ACTION-->
+<form asp-action="Edit" id="CreateFormular" method="post" enctype="multipart/form-data">
+    <!-- ROZDÍL JE ZDE V EDIT ACTION-->
 
-    <input type="hidden" asp-for="Id" />
+    <!-- <input type="hidden" asp-for="Id" /> -->
 
     <div class="mb-3">
-        <label class="form-label">Nazev Receptu</label>
-        <input class="form-control" asp-for="NazevProductu" />
-        <span asp-validation-for="NazevProductu" class="text-danger"></span>
+        <!-- NÁZEV RECEPTU -->
+        <label class="form-label">Název Receptu <span style="color: red;">*</span></label>
+        <span id="ErrorMessage1" style="display: none;" asp-validation-for="NazevProductu" class="text-danger">Prosím vyplňte název receptu</span>
+        <input id="ControlErrorMessage1" class="form-control" asp-for="NazevProductu" />
     </div>
     <div class="mb-3">
-        <label class="form-label">Kategorie</label>
-        <input class="form-control" asp-for="Kategorie">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Obtiznost</label>
-        <input class="form-control" asp-for="Obtiznost">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">CasovaNarocnost</label>
-        <input class="form-control" asp-for="CasovaNarocnost">
-    </div>
-    <div class="mb-3">
+        <!-- POPIS -->
         <label class="form-label">Popis</label>
-        <input class="form-control" asp-for="PopisReceptu">
+        <textarea class="form-control" style="height: 100px;" placeholder="Zde můžete napsat popis svého receptu...." asp-for="PopisReceptu"></textarea>
     </div>
     <div class="mb-3">
+        <!-- KATEGORIE -->
+        <label class="form-label">Kategorie <span style="color: red;">*</span></label>
+        <span id="ErrorMessage2" style="display: none;" asp-validation-for="Kategorie" class="text-danger">Prosím vyberte kategorii</span>
+        <select id="ControlErrorMessage2" class="form-select" asp-for="Kategorie">
+            <option value="">Zvolte kategorii....</option>
+            <option value="Snídaně">Snídaně</option>
+            <option value="Oběd">Oběd</option>
+            <option value="Večeře">Večeře</option>
+            <option value="Svačina">Svačina</option>
+            <option value="Snack">Snack</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <!-- OBTÍŽNOST -->
+        <label class="form-label">Obtížnost receptu</label>
+        <select class="form-select" asp-for="Obtiznost">
+            <option value="">Zvolte obtížnost....</option>
+            <option value="Jednoduchý">Jednoduchý</option>
+            <option value="Středně Obtížný">Středně Obtížný</option>
+            <option value="Obtížný">Obtížný</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <!-- ČASOVÁ NÁROČNOST -->
+        <label class="form-label">Časová náročnost</label>
+        <select class="form-select" asp-for="CasovaNarocnost">
+            <option value="">Zvolte dobu trvání receptu....</option>
+            <option value="Do 15 min.">Do 15 min.</option>
+            <option value="15 - 45 min.">15 - 45 min.</option>
+            <option value="45 - 90 min.">45 - 90 min.</option>
+            <option value="90+ min.">90+ min.</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <!-- SEZNAM SUROVIN -->
         <label class="form-label">Seznam Surovin</label>
-        <input class="form-control" asp-for="SeznamSurovin">
+        <input type="hidden" id="jsonSeznamSurovin" class="form-control" asp-for="SeznamSurovin" value="">
+        <div style="margin-bottom: 10px;">
+            <input type="text" id="nazev" placeholder="Název suroviny...." />
+            <input type="text" id="mnozstvi" placeholder="Množství suroviny...." />
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="pridatSurovinu()">Přidat surovinu</button>
+        <div id="errorSurovina" style="color: red; display: none;">Prosím zadejte název suroviny!</div>
+        <div id="seznamSurovin"></div>
     </div>
     <div class="mb-3">
-        <label class="form-label">Postup</label>
-        <input class="form-control" asp-for="PostupPripravy">
+        <!-- POSTUP PŘÍPRAVY -->
+        <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
+        <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
+        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
+        <!-- Odstranil jsem zde id controlmessage3 protože to bylo druhé id na tomto prvku
+            místo toho používám jsonKroky v mém .js souboru -->
+        <div id="steps">
+            <!-- Sem se budou přidávat kroky -->
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="pridatKrok()">Přidat další krok</button>
     </div>
-    <div class="mb-3">
-        <label class="form-label">Datum Vytvoreni</label>
-        <input class="form-control" asp-for="DatumVytvoreni">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Odkaz obrázku</label>
-        <input class="form-control" asp-for="ImageSrc">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Image</label>
-        <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Do editu jsem přidal FileUpload -->
-        <span asp-validation-for="Image" class="text-danger"></span>
+    <div class="mb-3"> <!-- VLOŽENÍ OBRÁZKU -->
+        <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
+        <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
+        <br>
+        <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
+        <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
+            místo toho používám fileupload v mém .js souboru -->
     </div>
 
     <button type="submit" class="btn btn-primary">Uložit změny</button>
 </form>
 
+<!--
+    - Musí se načíst a zobrazit seznam surovin v tabulce
+        - Samozřejmě s možností mazání
+        - Musí samozřejmě fungovat i přidávání nových surovin do tabulky
+    - Postup přípravy to samé jako suroviny
+        - Musí se načíst odpovídající počet okýnek a možností mazání a upravování okýneka přidávání nových
+    - Chtěl bych přidat náhled obrázku který je aktuálně uložen
+        - Možnost vybrat jinej, kterej by potom změnil ten původní
+
+
+
+-->
+
+
+
 @section Scripts
 {
     <partial name="_ValidationScriptsPartial" />
     <script src="~/js/validations/FileContentValidation.js"></script>
+    <script src="~/js/PridaniReceptu_Create.js"></script>
 }

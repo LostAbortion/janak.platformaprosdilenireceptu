@@ -19,6 +19,7 @@ namespace djanak.Domain.Entities
         [StringLength(100)]
         public string NazevProductu { get; set; }
         public string? PopisReceptu {  get; set; }
+        [Required]
         public string Kategorie { get; set; }
         
         //public int CategoryId { get; set; }
@@ -26,10 +27,12 @@ namespace djanak.Domain.Entities
         public string? Obtiznost { get; set; }
         public string? CasovaNarocnost { get; set; }
         public string? SeznamSurovin { get; set; }
+        [Required]
         public string PostupPripravy { get; set; }
         public DateTime DatumVytvoreni { get; set; }  //datum vytvoření budu přidávat k receptu automaticky pomocí .js (asi), nebude to rozhodně zadávat uživatel
         //[Required] // -> zde ten required bude znamenat že MUSÍM povinně přidat obrázek k mému receptu (asi teda)
         public string? ImageSrc { get; set; }
+        [Required]
         [NotMapped] // -> Toto myslím vysvětlovat tak že SQL není schopná přijmout adresu obrázku nebo tak něco. A tohle z toho prostě udělá nějakou
                     // bitovou řadu a pak to pujde
         [FileContent("image")]
