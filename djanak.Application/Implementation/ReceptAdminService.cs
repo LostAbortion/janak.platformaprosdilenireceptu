@@ -54,30 +54,35 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public async Task Edit(Recept product)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
+        public async Task Edit(Recept recept)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
-            Recept currentProduct = _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == product.Id);
+            Recept currentRecept = _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == recept.Id);
 
-            if (currentProduct != null)
+            if (currentRecept != null)
             {
+
+                // Provádí aktualizaci vlastností aktuálního receptu na základě dat z upraveného receptu
+                _eshopDbContext.Update(currentRecept);
+
+
                 //Zde změní hodnoty aktuálního produktu na nové
-                currentProduct.NazevProductu = product.NazevProductu;
-                currentProduct.Kategorie = product.Kategorie;
-                currentProduct.Obtiznost = product.Obtiznost;
-                currentProduct.CasovaNarocnost = product.CasovaNarocnost;
-                currentProduct.PopisReceptu = product.PopisReceptu;
-                currentProduct.SeznamSurovin = product.SeznamSurovin;
-                currentProduct.PostupPripravy = product.PostupPripravy;
-                currentProduct.DatumVytvoreni = product.DatumVytvoreni;
-                currentProduct.ImageSrc = product.ImageSrc;
+                //currentRecept.NazevProductu = recept.NazevProductu;
+                //currentRecept.Kategorie = recept.Kategorie;
+                //currentRecept.Obtiznost = recept.Obtiznost;
+                //currentRecept.CasovaNarocnost = recept.CasovaNarocnost;
+                //currentRecept.PopisReceptu = recept.PopisReceptu;
+                //currentRecept.SeznamSurovin = recept.SeznamSurovin;
+                //currentRecept.PostupPripravy = recept.PostupPripravy;
+                //currentRecept.DatumVytvoreni = recept.DatumVytvoreni;
+                //currentRecept.ImageSrc = recept.ImageSrc;
 
 
                 _eshopDbContext.SaveChanges();
 
-                if (product.Image != null)
+                if (recept.Image != null)
                 {
-                    string newImageSource = await _fileUploadService.FileUploadAsync(product.Image, Path.Combine("img", "products"));
-                    currentProduct.ImageSrc = newImageSource;
+                    string newImageSource = await _fileUploadService.FileUploadAsync(recept.Image, Path.Combine("img", "products"));
+                    currentRecept.ImageSrc = newImageSource;
                 }
 
                 _eshopDbContext.SaveChanges(); // Uložení změn do databáze

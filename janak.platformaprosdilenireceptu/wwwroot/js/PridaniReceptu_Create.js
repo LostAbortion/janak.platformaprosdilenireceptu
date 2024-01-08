@@ -78,6 +78,7 @@ function zobrazitSeznamSurovin() {
     let idSuroviny = 0;
 
     seznamSurovin.forEach(surovina => {
+        //console.log('Jednotlivá surovina' + surovina);
         const row = document.createElement('tr');
 
         const nazevCell = document.createElement('td');
@@ -128,10 +129,60 @@ function zobrazitSeznamSurovin() {
 ////
 ////
 
+function zobrazeniParametru() {
+
+    jsonSeznamSurovin = document.getElementById('jsonSeznamSurovin');
+    jsonPostupPripravy = document.getElementById('jsonKroky');
+
+    jsonSeznamSurovinValue = jsonSeznamSurovin.value;
+    jsonPostupPripravyValue = jsonPostupPripravy.value;
+
+    //console.log('SeznamSurovin' + jsonSeznamSurovinValue);
+    //console.log('PostupPripravy' + jsonPostupPripravyValue);
+
+    //Seznam surovin
+    var seznamSurovinTemp = JSON.parse(jsonSeznamSurovinValue);
+
+    seznamSurovinTemp.forEach(function(surovina) {
+        //console.log("Název: " + surovina.Nazev + ", Množství: " + surovina.Mnozstvi);
+
+        seznamSurovin.push(surovina);
+    });
+
+    zobrazitSeznamSurovin();
+
+
+
+    //Postup Pripravy
+
+
+
+
+
+    //obrázek ještě vyřeším
+}
+
+
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+
 let kroky = []; // Objekt pro ukládání kroků
                 // Už to není objekt, ale udělal jsem z toho pole a jdu to předělat
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOMContentLoaded se spustil');
+    zobrazeniParametru();
+
     pridatPrvniKrok();
 });
 
@@ -326,6 +377,32 @@ function ulozeniKroku() {
 ////
 ////
 
+function nacteniInformaci() {
+    const jsonText = '[{"Nazev":"Mléko","Mnozstvi":"200ml"},{"Nazev":"Mrkev","Mnozstvi":"3"}]';
+
+    // Deserializace JSON
+    const poleDat = JSON.parse(jsonText);
+
+    // Procházení deserializovaného pole objektů
+    poleDat.forEach((objekt) => {
+        console.log('Název:', objekt.Nazev);
+        console.log('Množství:', objekt.Mnozstvi);
+    });
+}
+
+
+
+
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
 
 document.getElementById('CreateFormular').addEventListener('submit', function (event) {
 

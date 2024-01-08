@@ -58,20 +58,20 @@
     <div class="mb-3">
         <!-- SEZNAM SUROVIN -->
         <label class="form-label">Seznam Surovin</label>
-        <input type="hidden" id="jsonSeznamSurovin" class="form-control" asp-for="SeznamSurovin" value="">
+        <input type="hidden" id="jsonSeznamSurovin" class="form-control" asp-for="SeznamSurovin" value="@Model.SeznamSurovin">
         <div style="margin-bottom: 10px;">
             <input type="text" id="nazev" placeholder="Název suroviny...." />
             <input type="text" id="mnozstvi" placeholder="Množství suroviny...." />
         </div>
         <button type="button" class="btn btn-secondary" onclick="pridatSurovinu()">Přidat surovinu</button>
         <div id="errorSurovina" style="color: red; display: none;">Prosím zadejte název suroviny!</div>
-        <div id="seznamSurovin"></div>
+        <div id="seznamSurovin" value=""></div>
     </div>
     <div class="mb-3">
         <!-- POSTUP PŘÍPRAVY -->
         <label class="form-label">Postup Přípravy <span style="color: red;">*</span></label>
         <span id="ErrorMessage3" style="display: none;" asp-validation-for="PostupPripravy" class="text-danger">Prosím zadejte alespoň první krok Vašeho receptu</span>
-        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="" />
+        <input type="hidden" id="jsonKroky" asp-for="PostupPripravy" value="@Model.PostupPripravy" />
         <!-- Odstranil jsem zde id controlmessage3 protože to bylo druhé id na tomto prvku
             místo toho používám jsonKroky v mém .js souboru -->
         <div id="steps">
