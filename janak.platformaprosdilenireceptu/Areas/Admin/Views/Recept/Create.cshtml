@@ -9,6 +9,8 @@
     <!-- ZDE JE ROZDÍL V CREATE ACTION OPROTI EDIT ACTION V EDITU-->
                                         <!-- enctype je tady kvůli tomu abychom mohli posílat i jiný typ dat než jen text (kvůli uploadu souboru)-->
 
+    <div id="idRozlisujiciCreateAEditFormulare" data-mode="create" style="display: none"></div>
+
 	<div class="mb-3">  <!-- NÁZEV RECEPTU -->
         <label class="form-label">Název Receptu <span style="color: red;">*</span></label>
         <span id="ErrorMessage1" style="display: none;" asp-validation-for="NazevProductu" class="text-danger">Prosím vyplňte název receptu</span>

@@ -110,50 +110,82 @@ function zobrazitSeznamSurovin() {
 
         tbody.appendChild(row);
     });
-    console.log(seznamSurovin);
+    //console.log(seznamSurovin);
     table.appendChild(tbody);
     seznamDiv.appendChild(table);
 }
 
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
 
-////
-////
-////
-////
-////
-////
-////
-////
-////
-////
-////
-////
+
 
 function zobrazeniParametru() {
 
     jsonSeznamSurovin = document.getElementById('jsonSeznamSurovin');
-    jsonPostupPripravy = document.getElementById('jsonKroky');
 
     jsonSeznamSurovinValue = jsonSeznamSurovin.value;
-    jsonPostupPripravyValue = jsonPostupPripravy.value;
 
     //console.log('SeznamSurovin' + jsonSeznamSurovinValue);
-    //console.log('PostupPripravy' + jsonPostupPripravyValue);
 
-    //Seznam surovin
+    //SEZNAM SUROVIN
     var seznamSurovinTemp = JSON.parse(jsonSeznamSurovinValue);
 
-    seznamSurovinTemp.forEach(function(surovina) {
+    seznamSurovinTemp.forEach(function (surovina) {
         //console.log("Název: " + surovina.Nazev + ", Množství: " + surovina.Mnozstvi);
 
         seznamSurovin.push(surovina);
     });
-
     zobrazitSeznamSurovin();
 
 
 
-    //Postup Pripravy
+    //POSTUP PRIPRAVY
+    jsonPostupPripravy = document.getElementById('jsonKroky');
+    jsonPostupPripravyValue = jsonPostupPripravy.value;
+
+    console.log('PostupPripravy: ' + jsonPostupPripravyValue);
+
+    var postupPripravyTemp = JSON.parse(jsonPostupPripravyValue);
+    /*
+    postupPripravyTemp.forEach(function (krok) {
+        console.log("Krok: " + krok);
+    });
+    */
+
+    temporaryPocetPoli = postupPripravyTemp.length;
+
+    for (let x = 1; x < temporaryPocetPoli; x++) {
+        pridatKrok();
+    }
+
+    //Zpočítání všech textových polí postupu pripravy v dokumentu
+    //const jsonKrokyInputPole = document.getElementById('jsonKroky');
+    const elementsWithSameID = document.querySelectorAll('.textAreaPostupPripravy');
+    const count = elementsWithSameID.length;
+    console.log('Hodnota count: ' + count);
+    //let prvniKrokProKontrolu;
+
+    for (let i = 0; i < count; i++) {
+        const element = elementsWithSameID[i];
+        //console.log(`Prvek číslo ${i + 1}:`, element);
+        //console.log('Hodnota prvku je: ' + element.value);
+        element.value = postupPripravyTemp[i];
+        console.log('Hodnota count je: ' + count);
+        console.log('Hodnota i je: ' + i);
+        console.log('Element value je: ' + element.value);
+
+    }
 
 
 
@@ -180,10 +212,16 @@ let kroky = []; // Objekt pro ukládání kroků
                 // Už to není objekt, ale udělal jsem z toho pole a jdu to předělat
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOMContentLoaded se spustil');
-    zobrazeniParametru();
+    //console.log('DOMContentLoaded se spustil');
+    const rozhodujiciDiv = document.getElementById('idRozlisujiciCreateAEditFormulare');
+    const rozhodujiciDivValue = rozhodujiciDiv.dataset.mode;
 
     pridatPrvniKrok();
+
+    if (rozhodujiciDivValue === 'edit') {
+        zobrazeniParametru();
+    }
+
 });
 
 function odstranitKrok(krokKey) {
@@ -223,9 +261,9 @@ function pridatPrvniKrok() {
     firstTextArea.classList.add('form-control');
     firstTextArea.style.height = '80px'; // Nastavení výšky textového pole
     firstTextArea.style.marginBottom = '10px'; // Přidání mezery pod textovým polem
-    const placeholderCislo = (parseInt(krokKey) + 1).toString();
     //firstTextArea.setAttribute('placeholder', placeholderCislo + '.krok');
-    firstTextArea.setAttribute('id', 'textAreaPostupPripravy'); // Přidání id odpovídajícímu klíči kroku
+    //firstTextArea.setAttribute('id', 'textAreaPostupPripravy'); // Přidání id odpovídajícímu klíči kroku
+    firstTextArea.classList.add('textAreaPostupPripravy');
 
 
     divProOdebratButton.appendChild(odebiraciButton);
@@ -240,8 +278,8 @@ function pridatPrvniKrok() {
 function pridatKrok() {
     const krokCount = kroky.length; // Počítadlo kroků
     const krokKey = `${krokCount}`; // Vytvoření klíče pro nový krok
-    console.log('Kolik je kroků: ' + krokCount);
-    console.log('Proměnná kroky = ' + kroky);
+    //console.log('Kolik je kroků: ' + krokCount);
+    //console.log('Začátek pridatKrok proměnná kroky: ' + kroky);
 
     //vytvoření divu obsahující button
     const divProOdebratButton = document.createElement('div');
@@ -271,7 +309,8 @@ function pridatKrok() {
     newTextArea.style.marginBottom = '10px'; // Přidání mezery pod textovým polem
     const placeholderCislo = (parseInt(krokKey) + 1).toString();
     //newTextArea.setAttribute('placeholder', placeholderCislo + '.krok');
-    newTextArea.setAttribute('id', 'textAreaPostupPripravy'); // Přidání id odpovídajícímu klíči kroku
+    //newTextArea.setAttribute('id', 'textAreaPostupPripravy'); // Přidání id odpovídajícímu klíči kroku
+    newTextArea.classList.add('textAreaPostupPripravy');
 
 
     divProOdebratButton.appendChild(odebiraciButton);
@@ -280,7 +319,8 @@ function pridatKrok() {
 
     // Uložení kroku do objektu kroky
     //kroky[krokKey] = ''; // Prázdný text pro nový krok
-    console.log('Proměnná kroky = ' + kroky);
+    //console.log('Kolik je kroků: ' + krokCount);
+    //console.log('Konec pridatKrok proměnná kroky = ' + kroky);
 }
 
 
@@ -322,8 +362,8 @@ function ulozeniKroku() {
 
     for (let i = 0; i < count; i++) {
         const element = elementsWithSameID[i];
-        console.log(`Prvek číslo ${i + 1}:`, element);
-        console.log('Hodnota prvku je: ' + element.value);
+        //console.log(`Prvek číslo ${i + 1}:`, element);
+        //console.log('Hodnota prvku je: ' + element.value);
 
         if (element.value !== '') {
             kroky[i] = element.value;
@@ -334,15 +374,15 @@ function ulozeniKroku() {
         }
     }
 
-    console.log('Proměnná kroky: ' + kroky);
-    console.log(kroky);
-    console.log('Hodnota prvniho kroku je: ' + prvniKrokProKontrolu);
+    //console.log('Proměnná kroky: ' + kroky);
+    //console.log(kroky);
+    //console.log('Hodnota prvniho kroku je: ' + prvniKrokProKontrolu);
 
     let jsonKroky;
     // Serializace kroků do JSON
     if (prvniKrokProKontrolu !== '') {
         jsonKroky = JSON.stringify(kroky);  //stringifine proměnou kroky
-        console.log('Vyjebanej typ jsonKroky: ' + typeof(jsonKroky));
+        //console.log('Vyjebanej typ jsonKroky: ' + typeof(jsonKroky));
     }
 
     else {
@@ -354,40 +394,15 @@ function ulozeniKroku() {
 
     if (jsonKroky !== null && prvniKrokProKontrolu !== '') {  //zkontroluju zda je actually něco zadanýho v kroku
         //pokud ne, tak se hodnota do value nepropíše
-        console.log('Ukládání hodnoty proběhlo.');
+        //console.log('Ukládání hodnoty proběhlo.');
         jsonKrokyInputPole.value = jsonKroky;
-        console.log('jsonKrokyInputPoleValue: ' + jsonKrokyInputPole.value);
+        //console.log('jsonKrokyInputPoleValue: ' + jsonKrokyInputPole.value);
         //console.log(jsonKrok1.value);
     }
 
     console.log('ulozeniKroku skončil');
 
     return true;
-}
-
-
-////
-////
-////
-////
-////
-////
-////
-////
-////
-////
-
-function nacteniInformaci() {
-    const jsonText = '[{"Nazev":"Mléko","Mnozstvi":"200ml"},{"Nazev":"Mrkev","Mnozstvi":"3"}]';
-
-    // Deserializace JSON
-    const poleDat = JSON.parse(jsonText);
-
-    // Procházení deserializovaného pole objektů
-    poleDat.forEach((objekt) => {
-        console.log('Název:', objekt.Nazev);
-        console.log('Množství:', objekt.Mnozstvi);
-    });
 }
 
 
@@ -433,6 +448,9 @@ document.getElementById('CreateFormular').addEventListener('submit', function (e
         event.preventDefault(); // Prevent the form from submitting
     }
 });
+
+
+
 
 /*
 document.getElementById('CreateFormular').addEventListener('submit', function (event) {
