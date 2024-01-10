@@ -154,7 +154,7 @@ function zobrazeniParametru() {
     jsonPostupPripravy = document.getElementById('jsonKroky');
     jsonPostupPripravyValue = jsonPostupPripravy.value;
 
-    console.log('PostupPripravy: ' + jsonPostupPripravyValue);
+    //console.log('PostupPripravy: ' + jsonPostupPripravyValue);
 
     var postupPripravyTemp = JSON.parse(jsonPostupPripravyValue);
     /*
@@ -173,7 +173,7 @@ function zobrazeniParametru() {
     //const jsonKrokyInputPole = document.getElementById('jsonKroky');
     const elementsWithSameID = document.querySelectorAll('.textAreaPostupPripravy');
     const count = elementsWithSameID.length;
-    console.log('Hodnota count: ' + count);
+    //console.log('Hodnota count: ' + count);
     //let prvniKrokProKontrolu;
 
     for (let i = 0; i < count; i++) {
@@ -181,17 +181,27 @@ function zobrazeniParametru() {
         //console.log(`Prvek číslo ${i + 1}:`, element);
         //console.log('Hodnota prvku je: ' + element.value);
         element.value = postupPripravyTemp[i];
-        console.log('Hodnota count je: ' + count);
-        console.log('Hodnota i je: ' + i);
-        console.log('Element value je: ' + element.value);
+        //console.log('Hodnota count je: ' + count);
+        //console.log('Hodnota i je: ' + i);
+        //console.log('Element value je: ' + element.value);
 
     }
 
+    //IMAGE
 
+    hodnotaImageSrc = document.getElementById('hodnotaImageSrc');
+    hodnotaImageSrcValue = hodnotaImageSrc.value;
 
+    // Vytvoření nového obrázku
+    var img = document.createElement('img');
+    img.src = hodnotaImageSrcValue; // Nastavení získané hodnoty jako zdroj obrázku
+    img.style.maxWidth = '100px'; // Nastavení maximální šířky pro náhled
+    img.style.maxHeight = '100px'; // Nastavení maximální výšky pro náhled
 
+    var divProVlozeniObrazku = document.getElementById('divProVlozeniObrazku');
 
-    //obrázek ještě vyřeším
+    divProVlozeniObrazku.appendChild(img);
+
 }
 
 
@@ -233,7 +243,7 @@ function odstranitKrok(krokKey) {
 function pridatPrvniKrok() {
     const krokKey = '0'; // Klíč pro první krok
 
-    console.log('PridatPrvniKrok se spustilo.');
+    //console.log('PridatPrvniKrok se spustilo.');
 
     //vytvoření divu obsahující button
     const divProOdebratButton = document.createElement('div');

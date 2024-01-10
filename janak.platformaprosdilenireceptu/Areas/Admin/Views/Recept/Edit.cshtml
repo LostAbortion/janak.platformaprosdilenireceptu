@@ -79,10 +79,11 @@
         </div>
         <button type="button" class="btn btn-secondary" onclick="pridatKrok()">Přidat další krok</button>
     </div>
-    <div class="mb-3"> <!-- VLOŽENÍ OBRÁZKU -->
+    <div id="divProVlozeniObrazku" class="mb-3"> <!-- VLOŽENÍ OBRÁZKU -->
         <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
         <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
         <br>
+        <input style="display: inline-block;" id="hodnotaImageSrc" value="@Model.ImageSrc">
         <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
         <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
             místo toho používám fileupload v mém .js souboru -->
