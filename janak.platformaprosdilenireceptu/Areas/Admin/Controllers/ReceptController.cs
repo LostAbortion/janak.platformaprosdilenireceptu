@@ -4,6 +4,7 @@ using djanak.Domain.Entities;
 using djanak.Infrastructure.Database;
 using djanak.Infrastructure.Identity.Enums;
 using Microsoft.AspNetCore.Authorization;
+using djanak.Application.ViewModels;
 
 
 // TENHLE PRODUCTCONTROLLER BUDE ASI SLOUŽIT PRO AREU ADMIN PRO PRODUKTY
@@ -74,13 +75,23 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            return View(recept);
+            ReceptViewModel receptViewModel = _receptService.MapReceptToViewModel(recept); // Převést entitu na ViewModel
+
+            return View(receptViewModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Recept recept)
+        public async Task<IActionResult> Edit(ReceptViewModel receptViewModel)
         {
-            await _receptService.Edit(recept);
+            if (!ModelState.IsValid)
+            {
+                return View(receptViewModel); // Vrátit původní View s chybami, pokud není validní
+            }
+
+
+            await _receptService.Edit(receptViewModel);
+
+            Recept receptToUpdate = _receptService.MapViewModelToRecept(receptViewModel); // Převést ViewModel na entitu
 
             return RedirectToAction(nameof(Index));
         }

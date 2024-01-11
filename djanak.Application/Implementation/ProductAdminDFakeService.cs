@@ -5,6 +5,7 @@ using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 using djanak.Application.Abstraction;
+using djanak.Application.ViewModels;
 using djanak.Domain.Entities;
 using djanak.Infrastructure.Database;
 
@@ -58,7 +59,7 @@ namespace djanak.Application.Implementation
             return deleted;
         }
 
-        public async Task Edit(Recept recept)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
+        public void Edit(Recept recept)  //změnil jsem název funkce aby přestala fungovat když ji budu volat a zprovoznil jsem tak edit na reálné databázi
         {
             Recept currentProduct = DatabaseFake.Recepts.FirstOrDefault(p => p.Id == recept.Id);
 
@@ -80,6 +81,26 @@ namespace djanak.Application.Implementation
         public Recept GetReceptById(int id)
         {
             return DatabaseFake.Recepts.FirstOrDefault(prod => prod.Id == id);
+        }
+
+        public Task Edit(ReceptViewModel recept)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ReceptViewModel MapReceptToViewModel(Recept recept)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Recept MapViewModelToRecept(ReceptViewModel viewModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IReceptAdminService.Edit(ReceptViewModel receptViewModel)
+        {
+            throw new NotImplementedException();
         }
     }
 }

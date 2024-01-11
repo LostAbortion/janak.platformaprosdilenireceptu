@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using djanak.Domain.Entities;
 
 namespace djanak.Application.ViewModels
 {
-    public class RegisterViewModel
+    public class RegisterViewModel : Entity
     {
         [Required]
         public string? Username { get; set; }

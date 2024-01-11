@@ -1,4 +1,4 @@
-﻿@model Recept
+﻿@model ReceptViewModel
 
 @{
 	ViewData["Title"] = "Editace receptu";  //TOTO JE VIEW NA EDIT
@@ -13,13 +13,13 @@
     <div class="mb-3">
         <!-- NÁZEV RECEPTU -->
         <label class="form-label">Název Receptu <span style="color: red;">*</span></label>
-        <span id="ErrorMessage1" style="display: none;" asp-validation-for="NazevProductu" class="text-danger">Prosím vyplňte název receptu</span>
-        <input id="ControlErrorMessage1" class="form-control" asp-for="NazevProductu" />
+        <span id="ErrorMessage1" style="display: none;" asp-validation-for="Nazev" class="text-danger">Prosím vyplňte název receptu</span>
+        <input id="ControlErrorMessage1" class="form-control" asp-for="Nazev" />
     </div>
     <div class="mb-3">
         <!-- POPIS -->
         <label class="form-label">Popis</label>
-        <textarea class="form-control" style="height: 100px;" placeholder="Zde můžete napsat popis svého receptu...." asp-for="PopisReceptu"></textarea>
+        <textarea class="form-control" style="height: 100px;" placeholder="Zde můžete napsat popis svého receptu...." asp-for="Popis"></textarea>
     </div>
     <div class="mb-3">
         <!-- KATEGORIE -->
@@ -83,7 +83,7 @@
         <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
         <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
         <br>
-        <input style="display: inline-block;" id="hodnotaImageSrc" value="@Model.ImageSrc">
+        <input style="display: none;" id="hodnotaImageSrc" value="@Model.ImageSrc">
         <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
         <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
             místo toho používám fileupload v mém .js souboru -->
