@@ -66,7 +66,7 @@ namespace djanak.Application.Implementation
             if (currentProduct != null)
             {
                 //Zde změní hodnoty aktuálního produktu na nové
-                currentProduct.NazevProductu = recept.NazevProductu;
+                currentProduct.NazevReceptu = recept.NazevReceptu;
                 currentProduct.Kategorie = recept.Kategorie;
                 currentProduct.Obtiznost = recept.Obtiznost;
                 currentProduct.CasovaNarocnost = recept.CasovaNarocnost;

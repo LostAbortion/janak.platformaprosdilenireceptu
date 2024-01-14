@@ -224,11 +224,11 @@ let kroky = []; // Objekt pro ukládání kroků
 document.addEventListener('DOMContentLoaded', function () {
     //console.log('DOMContentLoaded se spustil');
     const rozhodujiciDiv = document.getElementById('idRozlisujiciCreateAEditFormulare');
-    const rozhodujiciDivValue = rozhodujiciDiv.dataset.mode;
+    const rozhodujiciDivValue = rozhodujiciDiv.value;
 
     pridatPrvniKrok();
 
-    if (rozhodujiciDivValue === 'edit') {
+    if (rozhodujiciDivValue === 'Edit') {
         zobrazeniParametru();
     }
 
@@ -366,12 +366,12 @@ function ulozeniKroku() {
         kroky[textAreaId] = textAreaElement.value;
     }*/
     const jsonKrokyInputPole = document.getElementById('jsonKroky');
-    const elementsWithSameID = document.querySelectorAll('[id="textAreaPostupPripravy"]');
-    const count = elementsWithSameID.length;
+    const elementsWithSameClass = document.querySelectorAll('.textAreaPostupPripravy');
+    const count = elementsWithSameClass.length;
     let prvniKrokProKontrolu;
 
     for (let i = 0; i < count; i++) {
-        const element = elementsWithSameID[i];
+        const element = elementsWithSameClass[i];
         //console.log(`Prvek číslo ${i + 1}:`, element);
         //console.log('Hodnota prvku je: ' + element.value);
 
@@ -429,36 +429,86 @@ function ulozeniKroku() {
 ////
 ////
 
-document.getElementById('CreateFormular').addEventListener('submit', function (event) {
+if (document.getElementById('EditFormular') !== null) {
+    console.log('Zde provedu edit');
+    let editFormular = document.getElementById('EditFormular');
+    console.log('EditFormular se zde vytvoril');
 
-    let temp = ulozeniKroku();
+    editFormular.addEventListener('submit', function (event) {
 
-    const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'jsonKroky', 'fileupload'];  // poslední fileupload a je zde
-    //protože mi colidujou id v souboru create.cshtml
-    const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
-    let isValid = true;
+        console.log('Editformular event listener se spustil');
+        let temp = ulozeniKroku();
 
-    for (let i = 0; i < inputs.length; i++) {
+        const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'jsonKroky'];  // poslední fileupload a je zde
+        //protože mi colidujou id v souboru create.cshtml
+        const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3'];
+        let isValid = true;
 
-        let errorMessage = document.getElementById(errorMessages[i]);
+        for (let i = 0; i < inputs.length; i++) {
+
+            let errorMessage = document.getElementById(errorMessages[i]);
 
 
-        if (document.getElementById(inputs[i]).value === '') {
-            console.log('Hodnota při kontrole zobrazování erroru: ' + inputs[i].value);
-            isValid = false;
-            errorMessage.style.display = 'inline-block'; // Zobrazit chybu
+            if (document.getElementById(inputs[i]).value === '') {
+                console.log('Hodnota při kontrole zobrazování erroru: ' + inputs[i].value);
+                isValid = false;
+                errorMessage.style.display = 'inline-block'; // Zobrazit chybu
+            }
+            else {
+                console.log('Hodnota při kontrole zobrazování erroru prošla: ' + inputs[i].value);
+                errorMessage.style.display = 'none'; // Skrýt chybu
+            }
         }
+
+        if (isValid == false) {
+            console.log('isValid neprošlo');
+            event.preventDefault(); // Prevent the form from submitting
+        }
+        /*
         else {
-            console.log('Hodnota při kontrole zobrazování erroru prošla: ' + inputs[i].value);
-            errorMessage.style.display = 'none'; // Skrýt chybu
+            console.log('Formulář by se měl odeslat');
+            editFormular.submit();
+        }*/
+        editFormular.submit();
+        console.log('Konec eventlisteneru, nic se neodeslalo');
+    });
+}
+
+
+if (document.getElementById('CreateFormular') !== null) {
+    console.log('Zde provedu Create');
+    let createFormular = document.getElementById('CreateFormular');
+    console.log('CreateFormular se zde vytvoril');
+    createFormular.addEventListener('submit', function (event) {
+
+        ulozeniKroku();
+
+        const inputs = ['ControlErrorMessage1', 'ControlErrorMessage2', 'jsonKroky', 'fileupload'];  // poslední fileupload a je zde
+        //protože mi colidujou id v souboru create.cshtml
+        const errorMessages = ['ErrorMessage1', 'ErrorMessage2', 'ErrorMessage3', 'ErrorMessage4'];
+        let isValid = true;
+
+        for (let i = 0; i < inputs.length; i++) {
+
+            let errorMessage = document.getElementById(errorMessages[i]);
+
+
+            if (document.getElementById(inputs[i]).value === '') {
+                console.log('Hodnota při kontrole zobrazování erroru: ' + inputs[i].value);
+                isValid = false;
+                errorMessage.style.display = 'inline-block'; // Zobrazit chybu
+            }
+            else {
+                console.log('Hodnota při kontrole zobrazování erroru prošla: ' + inputs[i].value);
+                errorMessage.style.display = 'none'; // Skrýt chybu
+            }
         }
-    }
 
-    if (isValid == false) {
-        event.preventDefault(); // Prevent the form from submitting
-    }
-});
-
+        if (isValid == false) {
+            event.preventDefault(); // Prevent the form from submitting
+        }
+    });
+}
 
 
 

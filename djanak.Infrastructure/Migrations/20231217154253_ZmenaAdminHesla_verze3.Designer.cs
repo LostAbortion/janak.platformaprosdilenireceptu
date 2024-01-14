@@ -10,7 +10,7 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Infrastructure.Migrations
 {
-    [DbContext(typeof(EshopDbContext))]
+    [DbContext(typeof(PortalDbContext))]
     [Migration("20231217154253_ZmenaAdminHesla_verze3")]
     partial class ZmenaAdminHesla_verze3
     {

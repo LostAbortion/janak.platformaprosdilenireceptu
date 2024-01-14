@@ -10,7 +10,7 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Infrastructure.Migrations
 {
-    [DbContext(typeof(EshopDbContext))]
+    [DbContext(typeof(PortalDbContext))]
     [Migration("20231208182308_InitialCreate")]
     partial class InitialCreate
     {

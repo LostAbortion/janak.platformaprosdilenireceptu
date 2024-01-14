@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\janak.platformaprosdilenireceptu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\HomePageIndex.css",
+      "PackagePath": "staticwebassets\\css\\HomePageIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\ReceptView.css",
+      "PackagePath": "staticwebassets\\css\\ReceptView.css"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\ReceptyIndex.css",
+      "PackagePath": "staticwebassets\\css\\ReceptyIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\lightbox.css",
+      "PackagePath": "staticwebassets\\css\\lightbox.css"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\css\\lightbox.min.css"
+    },
+    {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
@@ -33,32 +53,52 @@
       "PackagePath": "staticwebassets\\img\\carousel\\carousel_03.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\header.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\header.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\Recept1.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\Recept1.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\ratatoile.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\ratatoile.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\Recept2.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\Recept2.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_01.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\recept_01.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\Recept3.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\Recept3.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_02.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\recept_02.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\Recept4.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\Recept4.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_03.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\recept_03.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\Recept5.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\Recept5.jpg"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\recept_04.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\recept_04.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox-plus-jquery.js",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox-plus-jquery.js"
     },
     {
-      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\img\\products\\tiger-jpg.jpg",
-      "PackagePath": "staticwebassets\\img\\products\\tiger-jpg.jpg"
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox-plus-jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox-plus-jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox-plus-jquery.min.map",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox-plus-jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox.js",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox.js"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox.min.js",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\Lightbox2\\lightbox.min.map",
+      "PackagePath": "staticwebassets\\js\\Lightbox2\\lightbox.min.map"
+    },
+    {
+      "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\ZobrazeniReceptu.js",
+      "PackagePath": "staticwebassets\\js\\ZobrazeniReceptu.js"
     },
     {
       "Id": "C:\\Users\\danie\\source\\repos\\janak.platformaprosdilenireceptu\\janak.platformaprosdilenireceptu\\wwwroot\\js\\dialogs.js",

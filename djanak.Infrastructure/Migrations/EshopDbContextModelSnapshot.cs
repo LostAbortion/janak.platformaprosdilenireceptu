@@ -9,7 +9,7 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Infrastructure.Migrations
 {
-    [DbContext(typeof(EshopDbContext))]
+    [DbContext(typeof(PortalDbContext))]
     partial class EshopDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -254,7 +254,7 @@ namespace djanak.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("NazevProductu")
+                    b.Property<string>("NazevReceptu")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
@@ -280,54 +280,15 @@ namespace djanak.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CasovaNarocnost = "30 minut",
+                            CasovaNarocnost = "15 - 45 min.",
                             DatumVytvoreni = new DateTime(2023, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageSrc = "/img/products/recept_01.jpg",
+                            ImageSrc = "/img/products/Recept1.jpg",
                             Kategorie = "Oběd",
-                            NazevProductu = "Pražská polévka",
-                            Obtiznost = "Snadné",
-                            PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                            PostupPripravy = "Nakrájenou cibuli necháme 12 minut odležet. Poté ji na sádle zpěníme, přidáme nakrájenou klobásu a opečeme.Přidáme mrkev, orestujeme a poté zasypeme červenou paprikou. Vše zalijeme vývarem, přidáme oloupané, nakrájené brambory, osolíme a polévku vaříme 15 minut.",
-                            SeznamSurovin = "1ks cibule, 1ks mrkev, 2ks brambory, 1ks klobása, 1l vývar, sůl, 2 lžičky sladké papriky, 1 lžíce sádla"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CasovaNarocnost = "40 minut",
-                            DatumVytvoreni = new DateTime(2020, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageSrc = "/img/products/recept_02.jpg",
-                            Kategorie = "Přílohy",
-                            NazevProductu = "Vařené brambory",
-                            Obtiznost = "Snadné",
-                            PopisReceptu = "Brambory se hodí ke všemu",
-                            PostupPripravy = "Brambory oloupeme a dáme do hrnce s vodou.Nakrájíme je na kostky, propláchneme a zalijeme čerstvou vodou. Osolíme, přidáme kmín a dáme vařit.Vaříme 15 minut do změknutí. Zda jsou brambory hotové, poznáme tak, že se po píchnutí vidličkou rozpadnou.",
-                            SeznamSurovin = "6ks brambory, 1 špetka soli, 1 špetka kmínu"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CasovaNarocnost = "20 minut",
-                            DatumVytvoreni = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageSrc = "/img/products/recept_03.jpg",
-                            Kategorie = "Oběd",
-                            NazevProductu = "Tuňákové těstoviny",
-                            Obtiznost = "Snadné",
-                            PopisReceptu = "Tuňák je zdravý pro kosti (určitě jo)",
-                            PostupPripravy = "Těstoviny uvaříme dle návodu.Na troše olivového oleje necháme zesklovatět nadrobno nakrájenou cibuli. Přidáme na plátky nakrájený česnek, chvilku míchejte.Přidejte rajčata a nakrájené lístky bazalky. Chvíli povařte. Nakonec vmíchejte rozdrobené maso tuňáka,které se snažíme vložit do jídla s minimálním množstvím oleje z konzervy, dochuťte solí/pepřem a nechte maso ve směsi prohřát.Do hotové směsi vmíchejte těstoviny a můžete servírovat. V případě zájmu je možné těstoviny posypat strouhaným parmazánem, není to však třeba.",
-                            SeznamSurovin = "1ks cibule, olivový olej, 3 stoužky česneku, 1 plechovka loupaných rajčat, pepř, sůl, 180g tuňáka v plechu, strouhaný parmazám,200g těstovin"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CasovaNarocnost = "40 minut",
-                            DatumVytvoreni = new DateTime(2023, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ImageSrc = "/img/products/recept_04.jpg",
-                            Kategorie = "Oběd",
-                            NazevProductu = "Kuřecí prsa s broskvemi a švestkami",
-                            Obtiznost = "Střední",
-                            PopisReceptu = "Mňam mňam broskvička s masíkem",
-                            PostupPripravy = "Prvně nasekat, pak povařit, pak promíchat. Tenhle recept je hrozně dlouhej, tak jsem ho sem nevkládal celej.",
-                            SeznamSurovin = "4ks kuřecí prsa, 2 lžíce povidla, 8 plátků šunky, 8ks šarlotky, 8ks švestek, 2ks broskve, olivový olej, sůl, pepř"
+                            NazevReceptu = "Kuřecí karbanátky",
+                            Obtiznost = "Jednoduchý",
+                            PopisReceptu = "Suprové karbanátky",
+                            PostupPripravy = "[\"Maso usmažit\",\"Maso upéct\"]",
+                            SeznamSurovin = "[{\"Nazev\":\"Kuřecí prsa\",\"Mnozstvi\":\"400g\"},{\"Nazev\":\"Blaťácké zlato\",\"Mnozstvi\":\"100g\"}]"
                         });
                 });
 

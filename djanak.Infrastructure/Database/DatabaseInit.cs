@@ -12,81 +12,45 @@ using System.Data;
 // DO ILIST<PRODUCT> SE PŘIDÁVAJÍ DATA
 namespace djanak.Infrastructure.Database
 {
-    internal class DatabaseInit
+    public class DatabaseInit
     {
         public IList<Recept> GetRecepts()
         {
             IList<Recept> recepts = new List<Recept>();
 
+            /*
+                Kategorie:
+                    Snídaně
+                    Oběd
+                    Večeře
+                    Svačina
+                    Snack
+                Obtížnost:
+                    Jednoduchý
+                    Středně Obtížný
+                    Obtížný
+                ČasováNáročnost:
+                    Do 15 min.
+                    15 - 45 min.
+                    45 - 90 min.
+                    90+ min.
+             */
 
             recepts.Add(
                 new Recept()
                 {
                     Id = 1,
-                    NazevProductu = "Pražská polévka",
+                    NazevReceptu = "Kuřecí karbanátky",
                     Kategorie = "Oběd",
-                    Obtiznost = "Snadné",
-                    CasovaNarocnost = "30 minut",
-                    PopisReceptu = "Recept je velmi chutný a jednoduchý na přípravu",
-                    SeznamSurovin = "1ks cibule, 1ks mrkev, 2ks brambory, 1ks klobása, 1l vývar, sůl, 2 lžičky sladké papriky, 1 lžíce sádla",
-                    PostupPripravy = "Nakrájenou cibuli necháme 12 minut odležet. Poté ji na sádle zpěníme, přidáme nakrájenou klobásu a opečeme." +
-                    "Přidáme mrkev, orestujeme a poté zasypeme červenou paprikou. Vše zalijeme vývarem, přidáme oloupané, nakrájené brambory, osolíme a polévku vaříme 15 minut.",
+                    Obtiznost = "Jednoduchý",
+                    CasovaNarocnost = "15 - 45 min.",
+                    PopisReceptu = "Suprové karbanátky",
+                    SeznamSurovin = "[{\"Nazev\":\"Kuřecí prsa\",\"Mnozstvi\":\"400g\"},{\"Nazev\":\"Blaťácké zlato\",\"Mnozstvi\":\"100g\"}]",
+                    PostupPripravy = "[\"Maso usmažit\",\"Maso upéct\"]",
                     DatumVytvoreni = new DateTime(2023, 10, 31),
-                    ImageSrc = "/img/products/recept_01.jpg",
-                });
-            
-            recepts.Add(
-                new Recept()
-                {
-                    Id = 2,
-                    NazevProductu = "Vařené brambory",
-                    Kategorie = "Přílohy",
-                    Obtiznost = "Snadné",
-                    CasovaNarocnost = "40 minut",
-                    PopisReceptu = "Brambory se hodí ke všemu",
-                    SeznamSurovin = "6ks brambory, 1 špetka soli, 1 špetka kmínu",
-                    PostupPripravy = "Brambory oloupeme a dáme do hrnce s vodou." +
-                    "Nakrájíme je na kostky, propláchneme a zalijeme čerstvou vodou. Osolíme, přidáme kmín a dáme vařit." +
-                    "Vaříme 15 minut do změknutí. Zda jsou brambory hotové, poznáme tak, že se po píchnutí vidličkou rozpadnou.",
-                    DatumVytvoreni = new DateTime(2020, 10, 31),
-                    ImageSrc = "/img/products/recept_02.jpg",
+                    ImageSrc = "/img/products/Recept1.jpg",
                 });
 
-            recepts.Add(
-                new Recept()
-                {
-                    Id = 3,
-                    NazevProductu = "Tuňákové těstoviny",
-                    Kategorie = "Oběd",
-                    Obtiznost = "Snadné",
-                    CasovaNarocnost = "20 minut",
-                    PopisReceptu = "Tuňák je zdravý pro kosti (určitě jo)",
-                    SeznamSurovin = "1ks cibule, olivový olej, 3 stoužky česneku, 1 plechovka loupaných rajčat, pepř, sůl, 180g tuňáka v plechu, strouhaný parmazám," +
-                    "200g těstovin",
-                    PostupPripravy = "Těstoviny uvaříme dle návodu." +
-                    "Na troše olivového oleje necháme zesklovatět nadrobno nakrájenou cibuli. Přidáme na plátky nakrájený česnek, chvilku míchejte." +
-                    "Přidejte rajčata a nakrájené lístky bazalky. Chvíli povařte. Nakonec vmíchejte rozdrobené maso tuňáka," +
-                    "které se snažíme vložit do jídla s minimálním množstvím oleje z konzervy, dochuťte solí/pepřem a nechte maso ve směsi prohřát." +
-                    "Do hotové směsi vmíchejte těstoviny a můžete servírovat. V případě zájmu je možné těstoviny posypat strouhaným parmazánem, není to však třeba.",
-                    DatumVytvoreni = new DateTime(2023, 1, 1),
-                    ImageSrc = "/img/products/recept_03.jpg",
-                });
-
-            recepts.Add(
-                new Recept()
-                {
-                    Id = 4,
-                    NazevProductu = "Kuřecí prsa s broskvemi a švestkami",
-                    Kategorie = "Oběd",
-                    Obtiznost = "Střední",
-                    CasovaNarocnost = "40 minut",
-                    PopisReceptu = "Mňam mňam broskvička s masíkem",
-                    SeznamSurovin = "4ks kuřecí prsa, 2 lžíce povidla, 8 plátků šunky, 8ks šarlotky, 8ks švestek, 2ks broskve, olivový olej, sůl, pepř",
-                    PostupPripravy = "Prvně nasekat, pak povařit, pak promíchat. Tenhle recept je hrozně dlouhej, tak jsem ho sem nevkládal celej.",
-                    DatumVytvoreni = new DateTime(2023, 10, 31),
-                    ImageSrc = "/img/products/recept_04.jpg",
-                });
-            
             return recepts;
         }
 

@@ -10,7 +10,7 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Infrastructure.Migrations
 {
-    [DbContext(typeof(EshopDbContext))]
+    [DbContext(typeof(PortalDbContext))]
     [Migration("20231212203946_PridaneIdentity_11tyden")]
     partial class PridaneIdentity_11tyden
     {

@@ -1,0 +1,13 @@
+﻿
+body {
+    background-color: #202020; /* Změňte na požadovanou barvu pozadí*/
+    color: #C0C0C0; /* Změňte na požadovanou barvu textu */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+.card {
+    background-color: #202020;
+}

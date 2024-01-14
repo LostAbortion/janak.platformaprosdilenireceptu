@@ -5,10 +5,12 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<form asp-action="Edit" id="CreateFormular" method="post" enctype="multipart/form-data">
+<form asp-action="Edit" id="EditFormular" method="post" enctype="multipart/form-data">
     <!-- ROZDÍL JE ZDE V EDIT ACTION-->
-    <div id="idRozlisujiciCreateAEditFormulare" data-mode="edit" style="display: none"></div>
+    <input id="idRozlisujiciCreateAEditFormulare" style="display: none" value="Edit"></input>
     <!-- <input type="hidden" asp-for="Id" /> -->
+
+    <input type="hidden" value="@Model.Id" asp-for="Id" />
 
     <div class="mb-3">
         <!-- NÁZEV RECEPTU -->
@@ -81,9 +83,9 @@
     </div>
     <div id="divProVlozeniObrazku" class="mb-3"> <!-- VLOŽENÍ OBRÁZKU -->
         <label class="form-label">Vyberte obrázek <span style="color: red;">*</span></label>
-        <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span>
+        <!-- <span id="ErrorMessage4" style="display: none;" asp-validation-for="Image" class="text-danger">Prosím přiložte obrázek Vašeho receptu</span> -->
         <br>
-        <input style="display: none;" id="hodnotaImageSrc" value="@Model.ImageSrc">
+        <input style="display: block;" id="hodnotaImageSrc" value="@Model.ImageSrc">
         <input id="fileupload" class="form-control-file" asp-for="Image">  <!-- Form control file je zde jasně viditelný rozdíl -->
         <!-- Odstranil jsem zde id controlmessage4 protože to bylo druhé id na tomto prvku
             místo toho používám fileupload v mém .js souboru -->
@@ -91,19 +93,6 @@
 
     <button type="submit" class="btn btn-primary">Uložit změny</button>
 </form>
-
-<!--
-    - Musí se načíst a zobrazit seznam surovin v tabulce
-        - Samozřejmě s možností mazání
-        - Musí samozřejmě fungovat i přidávání nových surovin do tabulky
-    - Postup přípravy to samé jako suroviny
-        - Musí se načíst odpovídající počet okýnek a možností mazání a upravování okýneka přidávání nových
-    - Chtěl bych přidat náhled obrázku který je aktuálně uložen
-        - Možnost vybrat jinej, kterej by potom změnil ten původní
-
-
-
--->
 
 
 

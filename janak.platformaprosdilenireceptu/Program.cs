@@ -15,7 +15,7 @@ ServerVersion serverVersion = new MySqlServerVersion("8.0.34");  //propojení s d
 
 //Odtud potud Identity a roles
 builder.Services.AddIdentity<User, Role>()
-				.AddEntityFrameworkStores<EshopDbContext>()
+				.AddEntityFrameworkStores<PortalDbContext>()
 				.AddDefaultTokenProviders();
 
 builder.Services.Configure<IdentityOptions>(options =>
@@ -27,7 +27,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 	options.Password.RequireLowercase = false;
 	options.Password.RequiredUniqueChars = 1;
 	options.Lockout.AllowedForNewUsers = true;
-	options.Lockout.MaxFailedAccessAttempts = 10;
+	options.Lockout.MaxFailedAccessAttempts = 100;
 	options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
 	options.User.RequireUniqueEmail = true;
 });
@@ -45,7 +45,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddScoped<IAccountService, AccountIdentityService>();
 //Odtud potud Identity a roles
 
-builder.Services.AddDbContext<EshopDbContext>(optionsBuilder => optionsBuilder.UseMySql(connectionString, serverVersion));  //propojení s databází 3
+builder.Services.AddDbContext<PortalDbContext>(optionsBuilder => optionsBuilder.UseMySql(connectionString, serverVersion));  //propojení s databází 3
 
 builder.Services.AddScoped<IFileUploadService, FileUploadService>
     (serviceProvider => new FileUploadService(serviceProvider.GetService<IWebHostEnvironment>().WebRootPath));
@@ -71,6 +71,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "areas",

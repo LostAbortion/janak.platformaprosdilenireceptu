@@ -1,0 +1,73 @@
+﻿@model Recept
+
+@{
+	ViewData["Title"] = "Recept";  //TOTO JE CREATE VIEW
+}
+
+
+
+<div class="container mt-5">
+    <h1>@Model.NazevReceptu</h1>
+    <div class="row">
+        <div class="col-md-8">
+            @if (!string.IsNullOrEmpty(Model.ImageSrc))
+            {
+                <div class="img-container" style="background-color: #A0A0A0; padding-top: 5px; padding-bottom: 5px">
+                    <a href="@Model.ImageSrc" data-lightbox="image-1" data-title="@Model.NazevReceptu">
+                        <img class="img-fluid" src="@Model.ImageSrc" alt="Obrázek receptu" />
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="col-md-4" style="display: flex; flex-direction: column; align-items: flex-start;">
+            <p style="margin-bottom: auto; align-self: flex-start;"><i class="bi bi-calendar-check"></i> @Model.DatumVytvoreni.ToString("dd. MM. yyyy")</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; align-self: flex-start; justify-content: center; height: 100%;">
+                <div style="display: flex; flex-direction: column; align-items: flex-start; align-self: flex-start; justify-content: flex-start; margin-bottom: auto">
+                    <p style="margin-bottom: 3px;"><i class="bi bi-puzzle"></i> <strong>Obtížnost:</strong> @Model.Obtiznost</p>
+                    <p style="margin-bottom: 3px;"><i class="bi bi-alarm"></i> <strong>Časová náročnost:</strong> @Model.CasovaNarocnost</p>
+                </div>
+                <div style="align-items: center; align-self: flex-start; justify-content: flex-start; height: 100%; margin-top: 10px">
+                    <p><strong>Popis:</strong> @Model.PopisReceptu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>Kategorie:</strong> @Model.Kategorie</p>
+        </div>
+    </div>
+    <div class="row">
+        <input type="text" id="seznamSurovin" style="display: none" value="@Model.SeznamSurovin"></input>
+        <div id="seznamSurovinDiv" class="col-lg-4">
+            <!-- Dynamické vkládání tabulky -->
+        </div>
+        <div class="col-lg-8">
+            <input type="text" id="postupPripravy" style="display: none" value="@Model.PostupPripravy"></input>
+            <div id="postupPripravyDiv" class="col-md">
+                <!-- Dynamické vkládání postupu přípravy -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/ReceptView.css" />
+    <link rel="stylesheet" href="~/css/lightbox.css" />
+}
+
+@section Scripts
+{
+    <script src="~/js/ZobrazeniReceptu.js"></script>
+    <script src="~/js/Lightbox2/lightbox.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightbox.option({
+                'resizeDuration': 800,
+                'wrapAround': true
+            });
+        });
+    </script>
+}

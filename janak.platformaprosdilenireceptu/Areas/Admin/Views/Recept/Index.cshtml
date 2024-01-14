@@ -13,13 +13,16 @@
         @foreach (var recept in Model)
         {
             <div class="col-md-4 mb-5">
-                <div class="card h-100">
+                <div class="card" style="height:450px">
                     <!-- Product image-->
-                    <img class="card-img-top" src="@recept.ImageSrc" alt="Product Image" />
+                    <a asp-action="ReceptView" asp-route-id="@recept.Id">
+                        <img class="card-img-top img-fluid" style="height: 150px; object-fit: cover;" src="@recept.ImageSrc" alt="Product Image" />
+                    </a>
                     <!-- Product details-->
                     <div class="card-body">
-                        <h5 class="card-title">@recept.NazevProductu</h5>
-                        <p class="card-text">@recept.PopisReceptu</p>
+                        <h5 class="card-title">@recept.NazevReceptu</h5>
+                        <p class="card-text"><i class="bi bi-alarm"></i> @recept.CasovaNarocnost</p>
+                        <p class="card-text"><i class="bi bi-puzzle"></i> @recept.Obtiznost</p>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer">
@@ -38,46 +41,7 @@
     <script src="~/js/dialogs.js"></script>
 }
 
-@* 
- if (Model != null && Model.Count > 0)
-     {
- <table class="table">
-     <thead>
-         <tr>
-             <th scope="col">@nameof(Product.Id)</th>
-             <th scope="col">@nameof(Product.NazevProductu)</th>
-             <th scope="col">@nameof(Product.Kategorie)</th>
-             <th scope="col">@nameof(Product.Obtiznost)</th>
-             <th scope="col">@nameof(Product.CasovaNarocnost)</th>
-             <th scope="col">@nameof(Product.PopisReceptu)</th>
-             <th scope="col">@nameof(Product.SeznamSurovin)</th>
-             <th scope="col">@nameof(Product.PostupPripravy)</th>
-             <th scope="col">@nameof(Product.DatumVytvoreni)</th>
-             <th scope="col">@nameof(Product.ImageSrc)</th>
-             <th scope="col">@nameof(Product.ImageAlt)</th>
-             <th scope="col">Edit</th>
-             <th scope="col">Delete</th>
-         </tr>
-     </thead>
-     <tbody>
-         @for (int i = 0; i < Model.Count; ++i)
-         {
-             <tr>
-                 <th scope="row">@Model[i].Id</th>
-                 <td>@Model[i].NazevProductu</td>
-                 <td>@Model[i].Kategorie</td>
-                 <td>@Model[i].Obtiznost</td>
-                 <td>@Model[i].CasovaNarocnost</td>
-                 <td>@Model[i].PopisReceptu</td>
-                 <td>@Model[i].SeznamSurovin</td>
-                 <td>@Model[i].PostupPripravy</td>
-                 <td>@Model[i].DatumVytvoreni</td>
-                 <td>@Model[i].ImageSrc</td>
-                 <td>@Model[i].ImageAlt</td>
-                 <td><a asp-action="Edit" asp-route-Id="@Model[i].Id">Edit</a></td>
-                 <td><a asp-action="Delete" asp-route-Id="@Model[i].Id" onclick="return ConfirmDelete();">Delete</a></td>
-             </tr>
-         }
-     </tbody>
- </table>
-     } *@
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/ReceptyIndex.css" />
+}

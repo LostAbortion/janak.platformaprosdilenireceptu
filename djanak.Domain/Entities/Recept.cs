@@ -17,7 +17,7 @@ namespace djanak.Domain.Entities
 
         [Required]
         [StringLength(100)]
-        public string NazevProductu { get; set; }
+        public string NazevReceptu { get; set; }
         public string? PopisReceptu {  get; set; }
         [Required]
         public string Kategorie { get; set; }

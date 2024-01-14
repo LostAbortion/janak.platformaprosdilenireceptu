@@ -10,7 +10,7 @@ using djanak.Infrastructure.Database;
 
 namespace djanak.Infrastructure.Migrations
 {
-    [DbContext(typeof(EshopDbContext))]
+    [DbContext(typeof(PortalDbContext))]
     [Migration("20231218212954_UpravaCreateRecept_verze1")]
     partial class UpravaCreateRecept_verze1
     {

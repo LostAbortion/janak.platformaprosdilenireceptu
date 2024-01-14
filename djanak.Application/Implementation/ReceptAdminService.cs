@@ -15,17 +15,17 @@ namespace djanak.Application.Implementation
     public class ReceptAdminService : IReceptAdminService
     {
         IFileUploadService _fileUploadService;
-        EshopDbContext _eshopDbContext;
+        PortalDbContext _portalDbContext;
 
-        public ReceptAdminService(IFileUploadService fileUploadService, EshopDbContext eshopDbContext)
+        public ReceptAdminService(IFileUploadService fileUploadService, PortalDbContext portalDbContext)
         {
             _fileUploadService = fileUploadService;
-            _eshopDbContext = eshopDbContext;
+            _portalDbContext = portalDbContext;
         }
 
         public IList<Recept> Select()
         {
-            return _eshopDbContext.Recepts.ToList();
+            return _portalDbContext.Recepts.ToList();
         }
 
         public async Task Create(Recept recept)
@@ -33,10 +33,10 @@ namespace djanak.Application.Implementation
             string imageSource = await _fileUploadService.FileUploadAsync(recept.Image, Path.Combine("img", "products"));
             recept.ImageSrc = imageSource;
 
-            if (_eshopDbContext.Recepts != null)
+            if (_portalDbContext.Recepts != null)
             {
-                _eshopDbContext.Recepts.Add(recept);
-                _eshopDbContext.SaveChanges();
+                _portalDbContext.Recepts.Add(recept);
+                _portalDbContext.SaveChanges();
             }
         }
 
@@ -44,12 +44,12 @@ namespace djanak.Application.Implementation
         {
             bool deleted = false;
 
-            Recept? product = _eshopDbContext.Recepts.FirstOrDefault(product => product.Id == id);
+            Recept? product = _portalDbContext.Recepts.FirstOrDefault(product => product.Id == id);
 
             if (product != null)
             {
-                _eshopDbContext.Recepts.Remove(product);
-                _eshopDbContext.SaveChanges();
+                _portalDbContext.Recepts.Remove(product);
+                _portalDbContext.SaveChanges();
 
                 deleted = true;
             }
@@ -60,29 +60,32 @@ namespace djanak.Application.Implementation
         public async Task Edit(ReceptViewModel receptViewModel)  //toto je pouze jenom jako dummy metoda proto abych mohl provést migraci
         {
             //ReceptViewModel receptToUpdate = MapReceptToViewModel(recept);  //Použití metody pro mapování ViewModelu na entitu
-            Recept currentRecept = _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == receptViewModel.Id);
+            Recept currentRecept = _portalDbContext.Recepts.FirstOrDefault(p => p.Id == receptViewModel.Id);
 
-            //if (currentRecept != null)
-            //{
+            if (currentRecept != null)
+            {
+                //Zde změní hodnoty aktuálního produktu na nové
+                currentRecept.NazevReceptu = receptViewModel.Nazev;
+                currentRecept.PopisReceptu = receptViewModel.Popis;
+                currentRecept.Kategorie = receptViewModel.Kategorie;
+                currentRecept.Obtiznost = receptViewModel.Obtiznost;
+                currentRecept.CasovaNarocnost = receptViewModel.CasovaNarocnost;
+                currentRecept.SeznamSurovin = receptViewModel.SeznamSurovin;
+                currentRecept.PostupPripravy = receptViewModel.PostupPripravy;
+                currentRecept.DatumVytvoreni = receptViewModel.DatumVytvoreni;
+                //currentRecept.ImageSrc = receptViewModel.ImageSrc;
+                //currentRecept.Image = receptViewModel.Image;
+            }
 
             // Aktualizace vlastností aktuálního receptu na základě dat z upraveného receptu
-            //_eshopDbContext.Entry(currentRecept).CurrentValues.SetValues(receptToUpdate);
+            //_portalDbContext.Entry(currentRecept).CurrentValues.SetValues(receptToUpdate);
 
 
             // Provádí aktualizaci vlastností aktuálního receptu na základě dat z upraveného receptu
-            //_eshopDbContext.Update(currentRecept);
+            //_portalDbContext.Update(currentRecept);
 
 
-            //Zde změní hodnoty aktuálního produktu na nové
-            //currentRecept.NazevProductu = viewModel.NazevProductu;
-            //currentRecept.Kategorie = viewModel.Kategorie;
-            //currentRecept.Obtiznost = viewModel.Obtiznost;
-            //currentRecept.CasovaNarocnost = viewModel.CasovaNarocnost;
-            //currentRecept.PopisReceptu = viewModel.PopisReceptu;
-            //currentRecept.SeznamSurovin = viewModel.SeznamSurovin;
-            //currentRecept.PostupPripravy = viewModel.PostupPripravy;
-            //currentRecept.DatumVytvoreni = viewModel.DatumVytvoreni;
-            //currentRecept.ImageSrc = viewModel.ImageSrc;
+
 
 
             if (currentRecept.Image != null)
@@ -92,14 +95,13 @@ namespace djanak.Application.Implementation
                 currentRecept.ImageSrc = newImageSource;
             }
 
-            _eshopDbContext.SaveChanges(); // Uložení změn do databáze
-            //}
+            _portalDbContext.SaveChanges(); // Uložení změn do databáze
         }
 
         public Recept GetReceptById(int id)  //toto je dummy metoda, která když se zavolá tak vyhodí chybu
                                                //mám ji tu proto aby mě visual studio nechalo provést migraci na databázi
         {
-            return _eshopDbContext.Recepts.FirstOrDefault(p => p.Id == id);  
+            return _portalDbContext.Recepts.FirstOrDefault(p => p.Id == id);  
         }
 
 
@@ -108,7 +110,7 @@ namespace djanak.Application.Implementation
         {
             return new ReceptViewModel
             {
-                Nazev = entity.NazevProductu,
+                Nazev = entity.NazevReceptu,
                 Popis = entity.PopisReceptu,
                 Kategorie = entity.Kategorie,
                 Obtiznost = entity.Obtiznost,
@@ -126,7 +128,7 @@ namespace djanak.Application.Implementation
         {
             return new Recept
             {
-                NazevProductu = viewModel.Nazev,
+                NazevReceptu = viewModel.Nazev,
                 PopisReceptu = viewModel.Popis,
                 Kategorie = viewModel.Kategorie,
                 Obtiznost = viewModel.Obtiznost,

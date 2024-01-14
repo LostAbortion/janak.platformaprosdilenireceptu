@@ -10,7 +10,7 @@
     if (Model != null && Model.Carousels != null && Model.Carousels.Count > 0)
     {
 
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
 
                 @for (int i = 0; i < Model.Carousels.Count; ++i)
@@ -24,32 +24,38 @@
                     </div>
                 }
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <div style="text-align: center; padding-top: 30px;">
-                <h1>Vítejte na stránce pro recepty</h1>
-            </div>
         </div>
-
     }
+    <div style="text-align: center; padding-top: 30px;">
+        <h1>Vítejte na stránce pro recepty</h1>
+    </div>
 }
 
 @{
     if (Model != null && Model.Recepts != null && Model.Recepts.Count > 0)
     {
 
-        <section class="py-2">
+        //<section class="py-2">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-4 justify-content-start">
 
-                    @for (int i = 0; i < Model.Recepts.Count; ++i)
+                   <!--  zavinacfor (int i = 0; i < Model.Recepts.Count; ++i)  -->
+                    @foreach (var recept in Model.Recepts)
                     {
+                        <div class="col-md-4 mb-5">
+                            <div class="card" style="height:400px">
+                                <!-- Product image-->
+                                <img class="card-img-top img-fluid" style="height: 150px; object-fit: cover;" src="@recept.ImageSrc" alt="Product Image" />
+                                <!-- Product details-->
+                                <div class="card-body">
+                                    <h5 class="card-title">@recept.NazevReceptu</h5>
+                                    <!-- <p class="card-text">zavinacrecept.PopisReceptu</p> -->
+                                    <p class="card-text">@((@recept.PopisReceptu.Length > 80) ? @recept.PopisReceptu.Substring(0, 80) + "..." : @recept.PopisReceptu)</p>
+                                </div>
+                            </div>
+                        </div>
+                        /*
+                        
                         <div class="col mb-5">
                             <div class="card h-100" style="width: 100%;">
                                 <!-- Product image-->
@@ -58,7 +64,7 @@
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <!-- Product name-->
-                                        <h5 class="fw-bolder">@Model.Recepts[i].NazevProductu</h5>
+                                        <h5 class="fw-bolder">@Model.Recepts[i].NazevReceptu</h5>
                                         <!-- Product reviews, zatím tam nic není a je to jenom výplň na hovno-->
                                         <div class="d-flex justify-content-center small text-warning mb-2">
                                             <div class="bi-star-fill"></div>
@@ -79,10 +85,11 @@
                                 </div>
                             </div>
                         </div>
+                         */
                     }
                 </div>
             </div>
-        </section>
+        //</section>
 
     }
 }
@@ -93,4 +100,5 @@
 @section Styles  
     {
     <link rel="stylesheet" href="~/css/shop_home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomePageIndex.css"/>
 }

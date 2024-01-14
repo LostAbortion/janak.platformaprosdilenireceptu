@@ -1,0 +1,20 @@
+﻿
+body {
+    background-color: #202020; /* Změňte na požadovanou barvu pozadí*/
+    color: #C0C0C0; /* Změňte na požadovanou barvu textu */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+
+
+.img-container {
+    max-width: 100%; /* Omezení na 100% šířky rodičovského sloupce */
+    overflow: hidden; /* Skryje případné přebytečné části obrázku */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

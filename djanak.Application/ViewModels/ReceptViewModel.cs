@@ -14,20 +14,20 @@ namespace djanak.Application.ViewModels
     public class ReceptViewModel : Entity
     {
 
-        [Required(ErrorMessage = "Název receptu je povinný")]
+        [Required]
         [StringLength(100)]
         public string Nazev { get; set; }
 
         public string Popis { get; set; }
 
-        [Required(ErrorMessage = "Kategorie receptu je povinná")]
+        [Required]
         public string Kategorie { get; set; }
 
         public string Obtiznost { get; set; }
         public string CasovaNarocnost { get; set; }
         public string SeznamSurovin { get; set; }
 
-        [Required(ErrorMessage = "Postup přípravy receptu je povinný")]
+        [Required]
         public string PostupPripravy { get; set; }
 
         public DateTime DatumVytvoreni { get; set; }
@@ -43,7 +43,7 @@ namespace djanak.Application.ViewModels
 
         public ReceptViewModel(Recept recept)
         {
-            Nazev = recept.NazevProductu;
+            Nazev = recept.NazevReceptu;
             Popis = recept.PopisReceptu;
             Kategorie = recept.Kategorie;
             Obtiznost = recept.Obtiznost;

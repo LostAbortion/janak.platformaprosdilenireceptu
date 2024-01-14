@@ -70,7 +70,7 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         {
             Recept recept = _receptService.GetReceptById(id);
 
-            if (recept == null) 
+            if (recept == null)
             {
                 return NotFound();
             }
@@ -85,6 +85,23 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
+                // Pokud stav modelu není platný, opět načtěte data receptu a vraťte zobrazení
+                Recept aktualniRecept = _receptService.GetReceptById(receptViewModel.Id);
+                if (aktualniRecept == null)
+                {
+                    return NotFound();
+                }
+                receptViewModel.Nazev = aktualniRecept.NazevReceptu;
+                receptViewModel.Popis = aktualniRecept.PopisReceptu;
+                receptViewModel.Kategorie = aktualniRecept.Kategorie;
+                receptViewModel.Obtiznost = aktualniRecept.Obtiznost;
+                receptViewModel.CasovaNarocnost = aktualniRecept.CasovaNarocnost;
+                receptViewModel.SeznamSurovin = aktualniRecept.SeznamSurovin;
+                receptViewModel.PostupPripravy = aktualniRecept.PostupPripravy;
+                receptViewModel.ImageSrc = aktualniRecept.ImageSrc;
+                receptViewModel.Image = aktualniRecept.Image;
+
+
                 return View(receptViewModel); // Vrátit původní View s chybami, pokud není validní
             }
 
@@ -94,6 +111,14 @@ namespace janak.platformaprosdilenireceptu.Areas.Admin.Controllers
             Recept receptToUpdate = _receptService.MapViewModelToRecept(receptViewModel); // Převést ViewModel na entitu
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult ReceptView(int id)
+        {
+            Recept recept = _receptService.GetReceptById(id);
+
+            return View(recept);
         }
     }
 }
